@@ -1,0 +1,112 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.4;
+  background-color: green;
+}
+
+.page-header__title-wrapper {
+  padding: 0.4em 0;
+  background-color: red;
+}
+
+.page-header__title {
+  font-size: 3em;
+  line-height: 1;
+  text-align: center;
+}
+
+.main-nav {
+  padding: 0.4em 0;
+  background-color: orange;
+}
+
+.main-nav__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.main-nav__item {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.main-nav__item:not(:last-of-type) {
+  margin-right: 1em;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 0.3em;
+}
+
+.main-nav__link:hover {
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  padding: 1em;
+  background-color: green;
+}
+
+.main-content__article:not(:last-of-type) {
+  margin-bottom: 0.6em;
+}
+
+.movie-article {
+  padding: 1em;
+  background-color: blue;
+}
+
+.movie-article__title {
+  padding-top: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 2em;
+}
+
+.movie-article__list {
+  padding-left: 1.5em;
+}
+
+.movie-article__item {
+  line-height: 1.6;
+}
+
+.page-footer {
+  padding: 0.4em 0;
+  background-color: purple;
+}
+
+.page-footer__text {
+  font-size: 3em;
+  text-align: center;
+  line-height: 1;
+}
