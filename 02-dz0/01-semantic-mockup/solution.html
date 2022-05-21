@@ -1,4 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <!-- Ваше решение -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Семантическая разметка страницы</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="page-header">
+      <div class="page-header__title-wrapper">
+        <h1 class="page-header__title">Header</h1>
+      </div>
+      <nav class="page-header__nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Navigation 1</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Navigation 2</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Navigation 3</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- MAIN -->
+    <main class="main-content">
+      <article class="main-content__article movie-article">
+        <h2 class="movie-article__title">Article 1</h2>
+        <ul class="movie-article__list movie-article__list--bulleted">
+          <li class="movie-article__item">Оригинальная трилогия</li>
+          <li class="movie-article__item">Трилогия приквелов</li>
+          <li class="movie-article__item">Трилогия сиквелов</li>
+        </ul>
+      </article>
+      <article class="main-content__article movie-article">
+        <h2 class="movie-article__title">Article 2</h2>
+        <ol class="movie-article__list movie-article__list--numbered">
+          <li class="movie-article__item">Эпизод IV — Новая надежда</li>
+          <li class="movie-article__item">
+            Эпизод V — Империя наносит ответный удар
+          </li>
+          <li class="movie-article__item">Эпизод VI — Возвращение джедая</li>
+        </ol>
+      </article>
+    </main>
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <p class="page-footer__text">Footer</p>
+    </footer>
+  </body>
 </html>
