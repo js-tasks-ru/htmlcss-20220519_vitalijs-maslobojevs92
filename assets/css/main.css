@@ -6,7 +6,8 @@
   --pink: #f784ad;
   --purple: #7048e8;
   --dark-purple: #5028c6;
-  --blue: #2342c0;
+  --blue: #374fc7;
+  --blue-01: #2342c0;
   --light-blue: #4263eb;
   --red: #f03d3e;
   --grey-1: #f8f9fa;
@@ -16,9 +17,11 @@
 
   --error: var(--red);
   --success: var(--blue);
+  --primary: var(--blue);
+  --secondary: var(--purple);
 
   --bg-color-button-primary: var(--light-blue);
-  --bg-color-button-hover-primary: var(--blue);
+  --bg-color-button-hover-primary: var(--blue-01);
   --color-button-primary: var(--white);
 
   --bg-color-button-secondary: var(--purple);
@@ -29,15 +32,15 @@
   --color-button-alternate: var(--grey-4);
   --border-color-button-alternate: var(--grey-3);
   --border-color-button-hover-alternate: var(--black);
+
+  --border-color-accordion: var(--grey-3);
+  --bg-color-accordion: var(--white);
+  --color-title-accordion: var(--black);
+  --color-text-accordion: var(--grey-4);
 }
 
 * {
   font-family: 'Roboto', sans-serif;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 100%;
 }
 
 html,
@@ -48,5 +51,5 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
