@@ -33,6 +33,11 @@
 
   --bg-color-header: var(--white);
   --bg-color-footer: var(--white);
+
+  --border-color-accordion: var(--grey-3);
+  --bg-color-accordion: var(--white);
+  --color-title-accordion: var(--black);
+  --color-text-accordion: var(--grey-4);
 }
 
 html {
