@@ -27,6 +27,7 @@
   --secondary: var(--purple);
 
   --font-family-base: 'Inter', sans-serif;
+
   --text-color-base: var(--black);
   --bg-color-base: var(--grey-0);
   --border-color-base: var(--grey-2);
