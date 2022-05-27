@@ -18,18 +18,30 @@
   --primary: var(--blue);
   --secondary: var(--purple);
 
+  --font-family-base: 'Inter', sans-serif;
+
   --border-color-accordion: var(--grey-3);
   --bg-color-accordion: var(--white);
   --color-title-accordion: var(--black);
   --color-text-accordion: var(--grey-4);
 }
 
-* {
-  font-family: 'Roboto', sans-serif;
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-family-base);
 }
