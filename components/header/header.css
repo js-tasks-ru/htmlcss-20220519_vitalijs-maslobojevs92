@@ -1,0 +1,17 @@
+.header {
+  padding: 96px 0 77px 0;
+  font-family: var(--font-family-base);
+  background-color: var(--bg-color-header);
+  color: var(--text-color-base);
+}
+
+.header__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1.28;
+}
+
+.header__title:not(:last-of-type) {
+  margin-bottom: 35px;
+}

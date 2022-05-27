@@ -1,4 +1,11 @@
 @import '../fonts/fonts.css';
+@import '../css/normalize.css';
+
+@import '../../components/page/page.css';
+@import '../../components/container/container.css';
+@import '../../components/header/header.css';
+@import '../../components/preview/preview.css';
+@import '../../components/footer/footer.css';
 
 :root {
   --white: #ffffff;
@@ -10,6 +17,7 @@
   --blue-01: #2342c0;
   --light-blue: #4263eb;
   --red: #f03d3e;
+  --grey-0: #f9fafc;
   --grey-1: #f8f9fa;
   --grey-2: #dde2e5;
   --grey-3: #acb5bd;
@@ -33,6 +41,13 @@
   --color-button-alternate: var(--grey-4);
   --border-color-button-alternate: var(--grey-3);
   --border-color-button-hover-alternate: var(--black);
+
+  --text-color-base: var(--black);
+  --bg-color-base: var(--grey-0);
+  --border-color-base: var(--grey-2);
+
+  --bg-color-header: var(--white);
+  --bg-color-footer: var(--white);
 
   --border-color-accordion: var(--grey-3);
   --bg-color-accordion: var(--white);
@@ -58,4 +73,5 @@ body {
 
 body {
   font-family: var(--font-family-base);
+  color: var(--text-color-base);
 }
