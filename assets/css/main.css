@@ -19,6 +19,7 @@
   --success: var(--blue);
   --primary: var(--blue);
   --secondary: var(--purple);
+  --font-family-base: 'Inter', sans-serif;
 
   --bg-color-button-primary: var(--light-blue);
   --bg-color-button-hover-primary: var(--blue-01);
@@ -53,4 +54,8 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-family-base);
 }
