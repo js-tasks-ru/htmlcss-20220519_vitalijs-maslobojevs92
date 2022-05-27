@@ -1,4 +1,11 @@
 @import '../fonts/fonts.css';
+@import '../css/normalize.css';
+
+@import '../../components/page/page.css';
+@import '../../components/container/container.css';
+@import '../../components/header/header.css';
+@import '../../components/preview/preview.css';
+@import '../../components/footer/footer.css';
 
 :root {
   --white: #ffffff;
@@ -7,6 +14,7 @@
   --purple: #7048e8;
   --blue: #374fc7;
   --red: #f03d3e;
+  --grey-0: #f9fafc;
   --grey-1: #f8f9fa;
   --grey-2: #dde2e5;
   --grey-3: #acb5bd;
@@ -19,6 +27,13 @@
   --secondary: var(--purple);
 
   --font-family-base: 'Inter', sans-serif;
+
+  --text-color-base: var(--black);
+  --bg-color-base: var(--grey-0);
+  --border-color-base: var(--grey-2);
+
+  --bg-color-header: var(--white);
+  --bg-color-footer: var(--white);
 
   --border-color-accordion: var(--grey-3);
   --bg-color-accordion: var(--white);
@@ -44,4 +59,5 @@ body {
 
 body {
   font-family: var(--font-family-base);
+  color: var(--text-color-base);
 }

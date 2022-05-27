@@ -1,0 +1,30 @@
+.footer {
+  padding: 70px 0 136px 0;
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--bg-color-footer);
+  color: var(--text-color-base);
+}
+
+.footer__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.footer__title:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.footer__description {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__description:not(:last-of-type) {
+  margin-bottom: 20px;
+}
