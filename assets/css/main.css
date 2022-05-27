@@ -39,8 +39,9 @@
   --color-text-accordion: var(--grey-4);
 }
 
-* {
-  font-family: 'Roboto', sans-serif;
+html {
+  box-sizing: border-box;
+  font-size: 100%;
 }
 
 html,
@@ -51,5 +52,5 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
