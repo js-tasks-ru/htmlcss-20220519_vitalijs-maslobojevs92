@@ -53,6 +53,9 @@
   --bg-color-accordion: var(--white);
   --color-title-accordion: var(--black);
   --color-text-accordion: var(--grey-4);
+
+  --border-color-skeleton: var(--grey-3);
+  --bg-color-skeleton-avatar: var(--grey-2);
 }
 
 html {
