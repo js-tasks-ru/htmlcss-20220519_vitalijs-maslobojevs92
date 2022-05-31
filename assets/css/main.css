@@ -56,6 +56,11 @@
 
   --border-color-skeleton: var(--grey-3);
   --bg-color-skeleton-avatar: var(--grey-2);
+
+  --bg-color-histogram: var(--white);
+  --border-color-histogram: var(--grey-3);
+  --color-histogram-link: var(--light-blue);
+  --bg-color-histogram-chart: var(--light-blue);
 }
 
 html {
