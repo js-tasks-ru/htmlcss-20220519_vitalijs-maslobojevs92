@@ -56,6 +56,7 @@
 
   --border-color-skeleton: var(--grey-3);
   --bg-color-skeleton-avatar: var(--grey-2);
+  --bg-color-skeleton: var(--white);
 
   --bg-color-histogram: var(--white);
   --border-color-histogram: var(--grey-3);

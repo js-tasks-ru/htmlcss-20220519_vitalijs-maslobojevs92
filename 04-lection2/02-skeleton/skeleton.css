@@ -2,6 +2,7 @@
   padding: 24px 40px 32px 24px;
   border: 1px solid var(--border-color-skeleton);
   border-radius: 8px;
+  background-color: var(--bg-color-skeleton);
 }
 
 .skeleton__header {
