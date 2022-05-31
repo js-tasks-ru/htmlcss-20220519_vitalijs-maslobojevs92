@@ -1,0 +1,57 @@
+.skeleton {
+  padding: 24px 40px 32px 24px;
+  border: 1px solid var(--border-color-skeleton);
+  border-radius: 8px;
+  background-color: var(--bg-color-skeleton);
+}
+
+.skeleton__header {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.skeleton__user-avatar {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+  border-radius: 100%;
+  background: var(--bg-color-skeleton-avatar);
+}
+
+.skeleton__user-description {
+  align-self: center;
+  flex-grow: 1;
+}
+
+.skeleton__line {
+  height: 20px;
+  margin-bottom: 8px;
+  background: linear-gradient(
+    92.51deg,
+    #dde2e5 6.44%,
+    #e2e6e8 38.47%,
+    #f3f5f5 56.48%,
+    #e3e7ea 77.5%,
+    #dde2e5 102.52%
+  );
+}
+
+.skeleton-line_small {
+  width: 40%;
+}
+
+.skeleton-line_medium {
+  width: 60%;
+}
+
+.skeleton-line_large {
+  width: 92%;
+}
+
+.skeleton-line_default {
+  width: 100%;
+}
+
+.skeleton__line:last-child {
+  margin-bottom: 0;
+}
