@@ -6,6 +6,10 @@
   border-radius: 8px;
 }
 
+.histogram_preview {
+  flex-grow: 1;
+}
+
 .histogram__header {
   margin-bottom: 39px;
 }
