@@ -10,6 +10,7 @@
 :root {
   --white: #ffffff;
   --black: #212429;
+  --transparent-black: rgba(33, 36, 41, 0.05);
   --pink: #f784ad;
   --purple: #7048e8;
   --dark-purple: #5028c6;
@@ -62,6 +63,10 @@
   --border-color-histogram: var(--grey-3);
   --color-histogram-link: var(--light-blue);
   --bg-color-histogram-chart: var(--light-blue);
+
+  --bg-color-tooltip-bubble: var(--light-blue);
+  --text-color-tooltip-bubble: var(--grey-2);
+  --box-shadow-color-tooltip-bubble: var(--transparent-black);
 }
 
 html {
