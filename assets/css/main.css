@@ -5,11 +5,14 @@
 @import '../../components/container/container.css';
 @import '../../components/header/header.css';
 @import '../../components/preview/preview.css';
+@import '../../components/card/card.css';
+@import '../../04-lection2/01-histogram/histogram.css';
 @import '../../components/footer/footer.css';
 
 :root {
   --white: #ffffff;
   --black: #212429;
+  --transparent-black: rgba(33, 36, 41, 0.05);
   --pink: #f784ad;
   --purple: #7048e8;
   --dark-purple: #5028c6;
@@ -62,6 +65,9 @@
   --border-color-histogram: var(--grey-3);
   --color-histogram-link: var(--light-blue);
   --bg-color-histogram-chart: var(--light-blue);
+
+  --bg-color-card: var(--white);
+  --box-shadow-color-card: var(--transparent-black);
 }
 
 html {
