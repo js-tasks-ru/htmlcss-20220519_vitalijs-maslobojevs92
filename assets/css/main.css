@@ -6,6 +6,7 @@
 @import '../../components/header/header.css';
 @import '../../components/preview/preview.css';
 @import '../../components/footer/footer.css';
+@import '../../03-lection1/01-button/button.css';
 
 :root {
   --white: #ffffff;
@@ -15,6 +16,7 @@
   --dark-purple: #5028c6;
   --blue: #374fc7;
   --blue-01: #2342c0;
+  --blue-02: #334d6e;
   --light-blue: #4263eb;
   --red: #f03d3e;
   --grey-0: #f9fafc;
@@ -22,6 +24,7 @@
   --grey-2: #dde2e5;
   --grey-3: #acb5bd;
   --grey-4: #495057;
+  --transparent-grey: rgba(196, 196, 196, 0.5);
 
   --error: var(--red);
   --success: var(--blue);
@@ -62,6 +65,12 @@
   --border-color-histogram: var(--grey-3);
   --color-histogram-link: var(--light-blue);
   --bg-color-histogram-chart: var(--light-blue);
+
+  --text-color-modal: var(--grey-4);
+  --bg-color-modal-popup-block: var(--white);
+  --fill-color-modal-svg-button: var(--pink);
+  --bg-color-modal-overlay: var(--transparent-grey);
+  --text-color-modal-title: var(--blue-02);
 }
 
 html {
