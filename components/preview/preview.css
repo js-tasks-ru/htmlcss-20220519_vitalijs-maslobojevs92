@@ -1,6 +1,19 @@
 .preview {
+  padding: 68px 0;
   flex: 1 1 auto;
   background-color: var(--bg-color-base);
   border-top: 1px solid var(--border-color-base);
   border-bottom: 1px solid var(--border-color-base);
+}
+
+.preview__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.preview__card {
+  /*суммырный gap в строке 30 * 2 = 60px делим на 3 (у нас 3 элемента в строке)*/
+  /*получаем 20px*/
+  width: calc(100% / 3 - 20px);
 }
