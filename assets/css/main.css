@@ -5,6 +5,8 @@
 @import '../../components/container/container.css';
 @import '../../components/header/header.css';
 @import '../../components/preview/preview.css';
+@import '../../components/card/card.css';
+@import '../../04-lection2/01-histogram/histogram.css';
 @import '../../components/footer/footer.css';
 
 :root {
@@ -67,6 +69,9 @@
   --bg-color-tooltip-bubble: var(--light-blue);
   --text-color-tooltip-bubble: var(--grey-2);
   --box-shadow-color-tooltip-bubble: var(--transparent-black);
+
+  --bg-color-card: var(--white);
+  --box-shadow-color-card: var(--transparent-black);
 }
 
 html {
