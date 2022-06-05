@@ -8,9 +8,9 @@
 
 .tooltip__bubble {
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + 13px);
   left: 50%;
-  transform: translate(-50%, -30%);
+  transform: translateX(-50%);
   display: none;
   padding: 10px;
   font-weight: 400;
