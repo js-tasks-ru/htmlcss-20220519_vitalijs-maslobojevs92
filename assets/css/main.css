@@ -18,13 +18,16 @@
   --dark-purple: #5028c6;
   --blue: #374fc7;
   --blue-01: #2342c0;
+  --blue-02: #334d6e;
   --light-blue: #4263eb;
+  --transparent-blue: rgba(160, 177, 245, 0.2);
   --red: #f03d3e;
   --grey-0: #f9fafc;
   --grey-1: #f8f9fa;
   --grey-2: #dde2e5;
   --grey-3: #acb5bd;
   --grey-4: #495057;
+  --grey-5: #90a0b7;
 
   --error: var(--red);
   --success: var(--blue);
@@ -65,6 +68,13 @@
   --border-color-histogram: var(--grey-3);
   --color-histogram-link: var(--light-blue);
   --bg-color-histogram-chart: var(--light-blue);
+
+  --color-text-calendar: var(--blue-02);
+  --color-text-calendar-date: var(--grey-5);
+  --border-color-calendar: var(--grey-3);
+  --bg-color-calendar-range-boundary: var(--light-blue);
+  --color-text-calendar-range-boundary: var(--white);
+  --bg-color-calendar-range-line: var(--transparent-blue);
 
   --bg-color-card: var(--white);
   --box-shadow-color-card: var(--transparent-black);
