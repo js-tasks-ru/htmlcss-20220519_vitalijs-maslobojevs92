@@ -1,10 +1,14 @@
 .footer {
   padding: 70px 0 136px 0;
-  font-family: var(--font-family-base);
   font-size: 16px;
   line-height: 1.5;
   background-color: var(--bg-color-footer);
   color: var(--text-color-base);
+}
+
+.footer_grey {
+  padding: 40px 0 56px 0;
+  background-color: var(--bg-color-footer-grey);
 }
 
 .footer__title {
@@ -23,6 +27,15 @@
   max-width: 640px;
   margin: 0 auto;
   text-align: center;
+}
+
+.footer__description_uppercase {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-color-footer);
 }
 
 .footer__description:not(:last-of-type) {

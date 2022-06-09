@@ -1,0 +1,10 @@
+.review__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 56px;
+  height: 100%;
+}
+
+.review__menu {
+  width: 230px;
+}
