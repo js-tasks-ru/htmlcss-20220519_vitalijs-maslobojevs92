@@ -8,10 +8,14 @@
 @import '../../components/card/card.css';
 @import '../../04-lection2/01-histogram/histogram.css';
 @import '../../components/footer/footer.css';
+@import '../../components/review/review.css';
+@import '../../components/aside-menu/aside-menu.css';
+@import '../../components/component/component.css';
 
 :root {
   --white: #ffffff;
   --black: #212429;
+  --black-1: #000000;
   --transparent-black: rgba(33, 36, 41, 0.05);
   --pink: #f784ad;
   --purple: #7048e8;
@@ -22,6 +26,7 @@
   --light-blue: #4263eb;
   --transparent-blue: rgba(160, 177, 245, 0.2);
   --red: #f03d3e;
+  --red-1: #d84910;
   --grey-0: #f9fafc;
   --grey-1: #f8f9fa;
   --grey-2: #dde2e5;
@@ -54,6 +59,8 @@
 
   --bg-color-header: var(--white);
   --bg-color-footer: var(--white);
+  --text-color-footer: var(--grey-3);
+  --bg-color-footer-grey: var(--grey-0);
 
   --border-color-accordion: var(--grey-3);
   --bg-color-accordion: var(--white);
@@ -68,6 +75,10 @@
   --border-color-histogram: var(--grey-3);
   --color-histogram-link: var(--light-blue);
   --bg-color-histogram-chart: var(--light-blue);
+
+  --bg-color-tooltip-bubble: var(--light-blue);
+  --text-color-tooltip-bubble: var(--grey-2);
+  --box-shadow-color-tooltip-bubble: var(--transparent-black);
 
   --color-text-calendar: var(--blue-02);
   --color-text-calendar-date: var(--grey-5);
@@ -86,6 +97,13 @@
   --text-color-form-controls-title-disabled: var(--grey-2);
   --border-color-form-constrols: var(--grey-2);
   --border-color-form-controls-focused: var(--grey-5);
+
+  --bg-color-component: var(--white);
+  --box-shadow-color-component: var(--grey-4);
+
+  --text-color-aside-menu-title: var(--black-1);
+  --text-color-aside-menu: var(--black);
+  --text-color-aside-menu-active: var(--red-1);
 }
 
 html {
