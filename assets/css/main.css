@@ -95,7 +95,7 @@
   --bg-color-form-controls-disabled: var(--grey-2);
   --text-color-form-controls-title: var(--grey-4);
   --text-color-form-controls-title-disabled: var(--grey-2);
-  --border-color-form-constrols: var(--grey-2);
+  --border-color-form-controls: var(--grey-2);
   --border-color-form-controls-focused: var(--grey-5);
 
   --bg-color-component: var(--white);
