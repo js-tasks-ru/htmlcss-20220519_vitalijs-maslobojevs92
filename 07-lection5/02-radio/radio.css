@@ -44,7 +44,7 @@
   width: 28px;
   height: 28px;
   background: var(--bg-color-form-controls);
-  border: 1px solid var(--border-color-form-constrols);
+  border: 1px solid var(--border-color-form-controls);
   border-radius: 50%;
 }
 
