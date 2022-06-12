@@ -96,6 +96,15 @@
   --text-color-aside-menu-title: var(--black-1);
   --text-color-aside-menu: var(--black);
   --text-color-aside-menu-active: var(--red-1);
+
+  --bg-color-form-controls: var(--white);
+  --bg-color-form-controls-checked: var(--light-blue);
+  --bg-color-form-controls-disabled: var(--grey-2);
+  --bg-color-form-controls-disabled-dark: var(--grey-3);
+  --text-color-form-controls-title: var(--grey-4);
+  --text-color-form-controls-title-disabled: var(--grey-2);
+  --border-color-form-controls: var(--grey-2);
+  --border-color-form-controls-focused: var(--grey-5);
 }
 
 html {
