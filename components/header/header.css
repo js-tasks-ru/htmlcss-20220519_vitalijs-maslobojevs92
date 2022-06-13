@@ -1,5 +1,5 @@
 .header {
-  padding: 96px 0 77px 0;
+  padding: 24px 0 0;
   font-family: var(--font-family-base);
   background-color: var(--bg-color-header);
   color: var(--text-color-base);
@@ -9,8 +9,12 @@
   padding: 25px 0 25px 0;
 }
 
+.header__menu-panel {
+  display: flex;
+}
+
 .header__title {
-  margin: 0;
+  margin: 40px 0;
   font-weight: 500;
   font-size: 50px;
   line-height: 1.28;
