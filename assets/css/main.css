@@ -8,6 +8,7 @@
 @import '../../components/card/card.css';
 @import '../../04-lection2/01-histogram/histogram.css';
 @import '../../components/footer/footer.css';
+@import '../../03-lection1/01-button/button.css';
 @import '../../components/review/review.css';
 @import '../../components/aside-menu/aside-menu.css';
 @import '../../components/component/component.css';
@@ -33,6 +34,7 @@
   --grey-3: #acb5bd;
   --grey-4: #495057;
   --grey-5: #90a0b7;
+  --transparent-grey: rgba(196, 196, 196, 0.5);
 
   --error: var(--red);
   --success: var(--blue);
@@ -75,6 +77,12 @@
   --border-color-histogram: var(--grey-3);
   --color-histogram-link: var(--light-blue);
   --bg-color-histogram-chart: var(--light-blue);
+
+  --text-color-modal: var(--grey-4);
+  --bg-color-modal-popup-block: var(--white);
+  --fill-color-modal-svg-button: var(--pink);
+  --bg-color-modal-overlay: var(--transparent-grey);
+  --text-color-modal-title: var(--blue-02);
 
   --bg-color-tooltip-bubble: var(--light-blue);
   --text-color-tooltip-bubble: var(--grey-2);
