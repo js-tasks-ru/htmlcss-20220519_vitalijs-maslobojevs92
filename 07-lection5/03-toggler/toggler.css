@@ -1,0 +1,60 @@
+.toggler {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.toggler__container {
+  width: 52px;
+  padding: 2px;
+  background-color: var(--bg-color-form-controls);
+  border: 1px solid var(--border-color-form-controls);
+  border-radius: 16px;
+}
+
+.toggler__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.toggler__input:disabled + .toggler__container {
+  background: var(--bg-color-form-controls-disabled);
+}
+.toggler__input:disabled + .toggler__container .toggler__control {
+  background: var(--bg-color-form-controls-disabled-dark);
+  opacity: 0.25;
+}
+
+.toggler__input:checked + .toggler__container {
+  background-color: var(--bg-color-form-controls-checked);
+  border-color: transparent;
+}
+
+.toggler__input:checked + .toggler__container .toggler__control {
+  left: 100%;
+  transform: translateX(-100%);
+  background-color: var(--bg-color-form-controls);
+}
+
+.toggler__control {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: var(--bg-color-form-controls-disabled);
+  border-radius: 50%;
+}
+
+.toggler__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color-form-controls-title);
+}
