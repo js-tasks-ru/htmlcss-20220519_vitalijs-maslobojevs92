@@ -122,6 +122,16 @@
   --text-color-form-controls-title-disabled: var(--grey-2);
   --border-color-form-controls: var(--grey-2);
   --border-color-form-controls-focused: var(--grey-5);
+
+  --text-color-form-input: var(--grey-4);
+  --text-color-form-title: var(--grey-3);
+  --text-color-form-placeholder: var(--grey-3);
+  --border-color-form-error: var(--error);
+  --border-color-form-input: var(--grey-3);
+  --border-color-form-focus: var(--light-blue);
+  --icon-color-form-error: var(--error);
+  --icon-color-form-success: var(--success);
+  --bg-color-form-input: var(--white);
 }
 
 html {
