@@ -23,14 +23,16 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  padding: 6px;
+  width: 24px;
+  height: 24px;
   line-height: 0;
   cursor: pointer;
 }
 
-.modal-window__button:hover svg path {
-  fill: var(--fill-color-modal-svg-button);
-  transition: 0.2s ease-in-out;
+.modal-window__icon {
+  width: 24px;
+  height: 24px;
+  fill: #495057;
 }
 
 .modal-window__title {
