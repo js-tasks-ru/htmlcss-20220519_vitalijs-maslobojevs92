@@ -88,6 +88,7 @@
   --bg-color-tooltip-bubble: var(--light-blue);
   --text-color-tooltip-bubble: var(--grey-2);
   --box-shadow-color-tooltip-bubble: var(--transparent-black);
+  --color-tooltip-trigger: var(--black);
 
   --color-text-calendar: var(--blue-02);
   --color-text-calendar-date: var(--grey-5);

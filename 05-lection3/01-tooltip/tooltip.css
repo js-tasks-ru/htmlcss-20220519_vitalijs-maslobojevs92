@@ -1,8 +1,6 @@
 .tooltip {
   position: relative;
   display: inline-block;
-
-  /*Убираем лишний оступ снизу. Можно так-же убрать его, задав svg картинке vertical-align*/
   line-height: 0;
 }
 
@@ -38,6 +36,12 @@
 
 .tooltip__trigger {
   cursor: pointer;
+}
+
+.tooltip__icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-tooltip-trigger);
 }
 
 .tooltip__trigger:hover ~ .tooltip__bubble {
