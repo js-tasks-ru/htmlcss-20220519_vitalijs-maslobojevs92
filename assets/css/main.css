@@ -13,6 +13,7 @@
 @import '../../components/aside-menu/aside-menu.css';
 @import '../../components/component/component.css';
 @import '../../components/logo/logo.css';
+@import '../../components/top-menu/top-menu.css';
 
 :root {
   --white: #ffffff;

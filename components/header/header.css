@@ -9,11 +9,7 @@
   background-color: var(--bg-color-header-grey);
 }
 
-.header__menu-panel {
-  display: flex;
-}
-
-.header__logo {
+.top-menu__logo {
   text-align: center;
 }
 
@@ -34,7 +30,7 @@
     padding: 17px 0 17px 0;
   }
 
-  .header__logo {
+  .top-menu__logo {
     flex-grow: 1;
   }
 
