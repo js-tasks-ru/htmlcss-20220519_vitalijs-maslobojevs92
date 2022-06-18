@@ -41,3 +41,22 @@
 .footer__description:not(:last-of-type) {
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 720px) {
+  .footer {
+    padding: 40px 0 60px 0;
+  }
+
+  .footer_grey {
+    padding: 30px 0 40px 0;
+  }
+
+  .footer__title {
+    font-size: 28px;
+    line-height: 1.35;
+  }
+
+  .footer__title:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

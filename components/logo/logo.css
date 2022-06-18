@@ -3,7 +3,7 @@
 }
 
 .logo__link {
-  display: block;
+  display: inline-block;
 }
 
 .logo__img {

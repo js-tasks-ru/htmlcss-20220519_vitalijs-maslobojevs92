@@ -1,3 +1,7 @@
+.review {
+  padding: 36px 0;
+}
+
 .review__inner {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -7,4 +11,20 @@
 
 .review__menu {
   width: 230px;
+}
+
+@media screen and (max-width: 992px) {
+  .review {
+    padding: 0;
+  }
+
+  .review__inner {
+    grid-column-gap: 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .review__inner {
+    grid-template-columns: 0 1fr;
+  }
 }
