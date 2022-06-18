@@ -13,6 +13,7 @@
 @import '../../components/aside-menu/aside-menu.css';
 @import '../../components/component/component.css';
 @import '../../components/logo/logo.css';
+@import '../../components/top-menu/top-menu.css';
 
 :root {
   --white: #ffffff;
@@ -60,7 +61,10 @@
   --bg-color-base: var(--grey-0);
   --border-color-base: var(--grey-2);
 
+  --text-color-header-title: var(--black);
+  --text-color-header-title-mobile: var(--grey-4);
   --bg-color-header: var(--white);
+  --bg-color-header-grey: var(--grey-0);
   --bg-color-footer: var(--white);
   --text-color-footer: var(--grey-3);
   --bg-color-footer-grey: var(--grey-0);
@@ -99,6 +103,7 @@
 
   --bg-color-card: var(--white);
   --box-shadow-color-card: var(--transparent-black);
+  --border-color-card: var(--grey-2);
 
   --bg-color-form-controls: var(--white);
   --bg-color-form-controls-checked: var(--light-blue);
