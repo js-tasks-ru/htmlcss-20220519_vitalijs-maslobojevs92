@@ -2,10 +2,6 @@
   width: 350px;
 }
 
-.form-group__label {
-  display: block;
-}
-
 .form-group_success .form-group__input {
   color: var(--text-color-form-input);
 }
@@ -25,6 +21,7 @@
 }
 
 .form-group__title {
+  display: block;
   margin: 0;
   margin-bottom: 5px;
   font-weight: 500;
