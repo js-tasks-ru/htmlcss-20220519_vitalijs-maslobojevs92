@@ -31,7 +31,9 @@
                 <h3 class="aside-menu__title">Components</h3>
                 <ul class="aside-menu__list">
                   <li class="aside-menu__item">
-                    <a href="/pages/modal.html" class="aside-menu__link"
+                    <a
+                      href="/pages/modal.html"
+                      class="aside-menu__link aside-menu__link_active"
                       >Modal</a
                     >
                   </li>
@@ -51,9 +53,7 @@
                     >
                   </li>
                   <li class="aside-menu__item">
-                    <a
-                      href="/pages/histogram.html"
-                      class="aside-menu__link aside-menu__link_active"
+                    <a href="/pages/histogram.html" class="aside-menu__link"
                       >Histogram</a
                     >
                   </li>
@@ -73,8 +73,53 @@
               </div>
             </nav>
             <div class="review__content component">
-              <h1 class="component__title">Histogram</h1>
-              <div class="component__content"></div>
+              <h1 class="component__title">Modal dialog</h1>
+              <div class="component__content">
+                <button id="modal-open" class="btn btn_primary">
+                  Open modal
+                </button>
+                <div id="modal" class="modal-window">
+                  <div class="modal-window__popup-block">
+                    <div id="modal-close" class="modal-window__button">
+                      <svg class="modal-window__icon">
+                        <use
+                          href="/assets/images/icons-sprite.svg#icon-x"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="modal-window__form-group form-group">
+                      <label for="field-1" class="form-group__title"
+                        >Name</label
+                      >
+                      <div class="form-group__input-wrapper">
+                        <input
+                          id="field-1"
+                          type="text"
+                          class="form-group__input"
+                          placeholder="Placeholder"
+                        />
+                      </div>
+                    </div>
+                    <div class="modal-window__form-group form-group">
+                      <label for="field-2" class="form-group__title"
+                        >Email</label
+                      >
+                      <div class="form-group__input-wrapper">
+                        <input
+                          id="field-2"
+                          type="text"
+                          class="form-group__input"
+                          placeholder="Placeholder"
+                          autofocus
+                        />
+                      </div>
+                    </div>
+                    <button class="modal-window__submit-btn btn btn_primary">
+                      Primary
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -88,4 +133,5 @@
       </footer>
     </div>
   </body>
+  <script src="/05-lection3/02-modal/index.js"></script>
 </html>

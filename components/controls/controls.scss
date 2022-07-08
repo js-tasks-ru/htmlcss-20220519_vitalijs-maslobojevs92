@@ -1,0 +1,17 @@
+.controls {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 30px;
+
+    .controls__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    @media screen and (max-width: 720px) {
+        & {
+            column-gap: 20px;
+        }
+    }
+}
