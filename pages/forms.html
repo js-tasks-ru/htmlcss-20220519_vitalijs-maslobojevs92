@@ -51,14 +51,14 @@
                     >
                   </li>
                   <li class="aside-menu__item">
-                    <a
-                      href="/pages/histogram.html"
-                      class="aside-menu__link aside-menu__link_active"
+                    <a href="/pages/histogram.html" class="aside-menu__link"
                       >Histogram</a
                     >
                   </li>
                   <li class="aside-menu__item">
-                    <a href="/pages/forms.html" class="aside-menu__link"
+                    <a
+                      href="/pages/forms.html"
+                      class="aside-menu__link aside-menu__link_active"
                       >Custom form elements</a
                     >
                   </li>
@@ -73,8 +73,62 @@
               </div>
             </nav>
             <div class="review__content component">
-              <h1 class="component__title">Histogram</h1>
-              <div class="component__content"></div>
+              <h1 class="component__title">Custom form elements</h1>
+              <div class="component__content">
+                <article class="controls">
+                  <div class="controls__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input" />
+                      <div class="checkbox__control"></div>
+                      <div class="checkbox__title">Default</div>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input" checked />
+                      <div class="checkbox__control"></div>
+                      <div class="checkbox__title">Checked</div>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input" disabled />
+                      <div class="checkbox__control"></div>
+                      <div class="checkbox__title">Disabled</div>
+                    </label>
+                  </div>
+                  <div class="controls__item">
+                    <label class="radio">
+                      <input
+                        type="radio"
+                        name="state"
+                        value="default"
+                        class="radio__input"
+                      />
+                      <div class="radio__control"></div>
+                      <div class="radio__title">Default</div>
+                    </label>
+                    <label class="radio">
+                      <input
+                        type="radio"
+                        name="state"
+                        value="checked"
+                        class="radio__input"
+                        checked
+                      />
+                      <div class="radio__control"></div>
+                      <div class="radio__title">Checked</div>
+                    </label>
+                    <label class="radio">
+                      <input
+                        type="radio"
+                        name="state"
+                        value="disabled"
+                        class="radio__input"
+                        disabled
+                      />
+                      <div class="radio__control"></div>
+                      <div class="radio__title">Disabled</div>
+                    </label>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,16 @@
+.avatar {
+    width: 102px;
+    height: 102px;
+
+    &_preview {
+        width: 160px;
+        height: 160px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

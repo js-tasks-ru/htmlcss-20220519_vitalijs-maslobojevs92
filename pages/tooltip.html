@@ -36,7 +36,9 @@
                     >
                   </li>
                   <li class="aside-menu__item">
-                    <a href="/pages/tooltip.html" class="aside-menu__link"
+                    <a
+                      href="/pages/tooltip.html"
+                      class="aside-menu__link aside-menu__link_active"
                       >Tooltip</a
                     >
                   </li>
@@ -51,9 +53,7 @@
                     >
                   </li>
                   <li class="aside-menu__item">
-                    <a
-                      href="/pages/histogram.html"
-                      class="aside-menu__link aside-menu__link_active"
+                    <a href="/pages/histogram.html" class="aside-menu__link"
                       >Histogram</a
                     >
                   </li>
@@ -73,8 +73,19 @@
               </div>
             </nav>
             <div class="review__content component">
-              <h1 class="component__title">Histogram</h1>
-              <div class="component__content"></div>
+              <h1 class="component__title">Tooltip</h1>
+              <div class="component__content">
+                <article class="tooltip tooltip_review">
+                  <div class="tooltip__trigger">
+                    <svg class="tooltip__icon">
+                      <use
+                        href="/assets/images/icons-sprite.svg#icon-help"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="tooltip__bubble">Helper Text</div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
