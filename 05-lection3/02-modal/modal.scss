@@ -1,88 +1,93 @@
 .modal-window {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    background: var(--bg-color-modal-overlay);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background: var(--bg-color-primary-transparent);
 
-    &_preview {
-        position: static;
-        display: block;
-        padding: 20px;
-    }
+  &_preview {
+    position: static;
+    display: block;
+    padding: 20px;
+  }
 
-    &_preview &__popup-block {
-        position: static;
-        padding: 15px;
-        transform: none;
-    }
+  &_preview &__popup-block {
+    position: static;
+    padding: 15px;
+    transform: none;
+  }
 
-    &__popup-block {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 428px;
-        padding: 30px 40px;
-        background: var(--bg-color-modal-popup-block);
-        border-radius: 8px;
-    }
+  &__popup-block {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 428px;
+    padding: 30px 40px;
+    background: var(--bg-color-secondary);
+    border-radius: 8px;
+  }
 
-    &__button {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        width: 24px;
-        height: 24px;
-        line-height: 0;
-        cursor: pointer;
-    }
+  &__button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    cursor: pointer;
+  }
 
-    &__icon {
-        width: 24px;
-        height: 24px;
-        fill: #495057;
-    }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: #495057;
+  }
 
-    &__title {
-        margin: 0 0 14px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        color: var(--text-color-modal-title);
-    }
+  &__title {
+    margin: 0 0 14px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text-color-additional-darkest);
+  }
 
-    &__text {
-        margin: 0;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: var(--text-color-modal);
-    }
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color-secondary);
+  }
 
-    &__form-group {
-        margin-bottom: 15px;
-    }
+  &__form-group {
+    margin-bottom: 15px;
+  }
 
-    &__form-group_preview {
-        margin-bottom: 10px;
-    }
+  &__form-group_preview {
+    margin-bottom: 10px;
+  }
 
-    &__form-group_preview .form-group__input {
-        height: 40px;
-        font-size: 14px;
-        padding: 5px 15px 5px 7px;
-    }
+  &__form-group_preview .form-group__input {
+    height: 40px;
+    font-size: 14px;
+    padding: 5px 15px 5px 7px;
+  }
 
-    &__submit-btn {
-        width: 50%;
-    }
+  &__form-group_preview .form-group__title {
+    margin-bottom: 3px;
+    font-size: 10px;
+  }
 
-    &__submit-btn_preview {
-        height: 35px;
-        padding: 5px;
-        font-weight: normal;
-    }
+  &__submit-btn {
+    width: 50%;
+  }
+
+  &__submit-btn_preview {
+    height: 35px;
+    padding: 5px;
+    font-weight: normal;
+  }
 }
