@@ -1,42 +1,40 @@
 .header {
-  padding: 24px 0 0;
-  font-family: var(--font-family-primary);
-  background-color: var(--bg-color-secondary);
+    padding: 24px 0 0;
+    font-family: var(--font-family-primary);
+    background-color: var(--bg-color-secondary);
 
-  &_grey {
-    padding: 25px 0 25px 0;
-    background-color: var(--bg-color-primary);
-  }
-
-  &__logo {
-    text-align: center;
-  }
-
-  &__title {
-    margin: 40px 0;
-    font-weight: 500;
-    font-size: 50px;
-    line-height: 1.28;
-    color: var(--text-color-primary);
-  }
-
-  &__title:not(:last-of-type) {
-    margin-bottom: 35px;
-  }
-
-  @media screen and (max-width: 720px) {
     &_grey {
-      padding: 17px 0 17px 0;
+        padding: 25px 0 25px 0;
+        background-color: var(--bg-color-primary);
     }
 
     &__logo {
-      flex-grow: 1;
+        text-align: center;
     }
 
     &__title {
-      font-size: 28px;
-      line-height: 1.35;
-      color: var(--text-color-secondary);
+        margin: 40px 0;
+        font-weight: 500;
+        @include fzlh(50, 64);
+        color: var(--text-color-primary);
     }
-  }
+
+    &__title:not(:last-of-type) {
+        margin-bottom: 35px;
+    }
+
+    @media screen and (max-width: 720px) {
+        &_grey {
+            padding: 17px 0 17px 0;
+        }
+
+        &__logo {
+            flex-grow: 1;
+        }
+
+        &__title {
+            @include fzlh(28, 38);
+            color: var(--text-color-secondary);
+        }
+    }
 }

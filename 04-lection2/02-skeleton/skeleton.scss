@@ -1,57 +1,52 @@
 .skeleton {
-  padding: 24px 40px 32px 24px;
-  border: 1px solid var(--border-color-primary-darken);
-  border-radius: 8px;
-  background-color: var(--bg-color-secondary);
+    padding: 24px 40px 32px 24px;
+    border: 1px solid var(--border-color-primary-darken);
+    border-radius: 8px;
+    background-color: var(--bg-color-secondary);
 
-  &__header {
-    display: flex;
-    margin-bottom: 24px;
-  }
+    &__header {
+        display: flex;
+        margin-bottom: 24px;
+    }
 
-  &__user-avatar {
-    width: 64px;
-    height: 64px;
-    margin-right: 16px;
-    border-radius: 100%;
-    background: var(--bg-color-primary-darken);
-  }
+    &__user-avatar {
+        width: 64px;
+        height: 64px;
+        margin-right: 16px;
+        border-radius: 100%;
+        background: var(--bg-color-primary-darken);
+    }
 
-  &__user-description {
-    align-self: center;
-    flex-grow: 1;
-  }
+    &__user-description {
+        align-self: center;
+        flex-grow: 1;
+    }
 
-  &__line {
-    height: 20px;
-    margin-bottom: 8px;
-    background: linear-gradient(
-      92.51deg,
-      #dde2e5 6.44%,
-      #e2e6e8 38.47%,
-      #f3f5f5 56.48%,
-      #e3e7ea 77.5%,
-      #dde2e5 102.52%
-    );
-  }
+    &__line {
+        height: 20px;
+        margin-bottom: 8px;
+        background: linear-gradient(
+            92.51deg, #dde2e5 6.44%, #e2e6e8 38.47%, #f3f5f5 56.48%, #e3e7ea 77.5%, #dde2e5 102.52%
+        );
+    }
 
-  &__line:last-child {
-    margin-bottom: 0;
-  }
+    &__line:last-child {
+        margin-bottom: 0;
+    }
 
-  &_small {
-    width: 40%;
-  }
+    &_small {
+        width: 40%;
+    }
 
-  &_medium {
-    width: 60%;
-  }
+    &_medium {
+        width: 60%;
+    }
 
-  &_large {
-    width: 92%;
-  }
+    &_large {
+        width: 92%;
+    }
 
-  &_default {
-    width: 100%;
-  }
+    &_default {
+        width: 100%;
+    }
 }

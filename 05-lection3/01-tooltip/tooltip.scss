@@ -1,61 +1,60 @@
 .tooltip {
-  position: relative;
-  display: inline-block;
-  line-height: 0;
+    position: relative;
+    display: inline-block;
+    line-height: 0;
 
-  &_preview {
-    top: 30px;
-  }
+    &_preview {
+        top: 30px;
+    }
 
-  &_preview &__bubble {
-    display: block;
-  }
+    &_preview &__bubble {
+        display: block;
+    }
 
-  &_review {
-    margin: 50px 0 0 48px;
-  }
+    &_review {
+        margin: 50px 0 0 48px;
+    }
 
-  &__bubble {
-    position: absolute;
-    bottom: calc(100% + 13px);
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    padding: 10px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    color: var(--text-color-secondary-lightest);
-    white-space: nowrap;
-    background-color: var(--bg-color-elements);
-    box-shadow: 0px 2px 4px var(--box-shadow-primary);
-    border-radius: 10px;
-  }
+    &__bubble {
+        position: absolute;
+        bottom: calc(100% + 13px);
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        padding: 10px;
+        font-weight: 400;
+        @include fzlh(16, 24);
+        text-align: center;
+        color: var(--text-color-secondary-lightest);
+        white-space: nowrap;
+        background-color: var(--bg-color-elements);
+        box-shadow: 0px 2px 4px var(--box-shadow-primary);
+        border-radius: 10px;
+    }
 
-  &__bubble::after {
-    content: '';
-    top: calc(100% - 7px);
-    left: calc(50% - 7px);
-    transform: rotate(45deg);
-    position: absolute;
-    display: block;
-    width: 14px;
-    height: 14px;
-    background-color: var(--bg-color-elements);
-  }
+    &__bubble::after {
+        content: '';
+        top: calc(100% - 7px);
+        left: calc(50% - 7px);
+        transform: rotate(45deg);
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-color: var(--bg-color-elements);
+    }
 
-  &__trigger {
-    cursor: pointer;
-  }
+    &__trigger {
+        cursor: pointer;
+    }
 
-  &__icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--fill-color-primary);
-  }
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--fill-color-primary);
+    }
 
-  &__trigger:hover ~ .tooltip__bubble {
-    display: block;
-  }
+    &__trigger:hover ~ .tooltip__bubble {
+        display: block;
+    }
 }

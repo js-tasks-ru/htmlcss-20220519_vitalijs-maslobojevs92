@@ -1,62 +1,58 @@
 .footer {
-  padding: 70px 0 136px 0;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: var(--bg-color-secondary);
-  color: var(--text-color-primary);
-
-  &_grey {
-    padding: 40px 0 56px 0;
-    background-color: var(--bg-color-primary);
-  }
-
-  &__title {
-    margin: 0;
-    font-size: 38px;
-    font-weight: 500;
-    line-height: 1.18;
-    text-align: center;
-  }
-
-  &__title:not(:last-child) {
-    margin-bottom: 32px;
-  }
-
-  &__description {
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  &__description_uppercase {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--text-color-secondary-lighter);
-  }
-
-  &__description:not(:last-of-type) {
-    margin-bottom: 20px;
-  }
-
-  @media screen and (max-width: 720px) {
-    & {
-      padding: 40px 0 60px 0;
-    }
+    padding: 70px 0 136px 0;
+    @include fzlh(16, 24);
+    background-color: var(--bg-color-secondary);
+    color: var(--text-color-primary);
 
     &_grey {
-      padding: 30px 0 40px 0;
+        padding: 40px 0 56px 0;
+        background-color: var(--bg-color-primary);
     }
 
     &__title {
-      font-size: 28px;
-      line-height: 1.35;
+        margin: 0;
+        font-weight: 500;
+        @include fzlh(38, 45);
+        text-align: center;
     }
 
     &__title:not(:last-child) {
-      margin-bottom: 20px;
+        margin-bottom: 32px;
     }
-  }
+
+    &__description {
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__description_uppercase {
+        font-weight: 500;
+        @include fzlh(12, 18);
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: var(--text-color-secondary-lighter);
+    }
+
+    &__description:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 720px) {
+        & {
+            padding: 40px 0 60px 0;
+        }
+
+        &_grey {
+            padding: 30px 0 40px 0;
+        }
+
+        &__title {
+            @include fzlh(28, 38);
+        }
+
+        &__title:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
 }

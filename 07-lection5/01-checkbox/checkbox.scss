@@ -1,55 +1,54 @@
 .checkbox {
-  display: inline-flex;
-  align-items: center;
-  column-gap: 12px;
-  user-select: none;
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 12px;
+    user-select: none;
+    cursor: pointer;
 
-  &__input {
-    position: absolute;
-    width: 0;
-    height: 0;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0, 0, 0, 0);
-    overflow: hidden;
-  }
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+    }
 
-  &__input:checked + &__control {
-    background: url('/assets/images/check-mark.svg') no-repeat center;
-    background-color: var(--bg-color-elements);
-    border: none;
-    border-radius: 4px;
-  }
+    &__input:checked + &__control {
+        background: url('/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/check-mark.svg') no-repeat center;
+        background-color: var(--bg-color-elements);
+        border: none;
+        border-radius: 4px;
+    }
 
-  &__input:focus + &__control {
-    border-color: var(--border-color-primary-darkest);
-  }
+    &__input:focus + &__control {
+        border-color: var(--border-color-primary-darkest);
+    }
 
-  &__input:disabled + &__control {
-    background: var(--bg-color-primary-darken);
-    border: none;
-  }
+    &__input:disabled + &__control {
+        background: var(--bg-color-primary-darken);
+        border: none;
+    }
 
-  &__input:disabled ~ &__title {
-    color: var(--text-color-secondary-lightest);
-  }
+    &__input:disabled ~ &__title {
+        color: var(--text-color-secondary-lightest);
+    }
 
-  &__control {
-    width: 28px;
-    height: 28px;
-    background: var(--bg-color-secondary);
-    border: 1px solid var(--border-color-primary);
-    border-radius: 4px;
-  }
+    &__control {
+        width: 28px;
+        height: 28px;
+        background: var(--bg-color-secondary);
+        border: 1px solid var(--border-color-primary);
+        border-radius: 4px;
+    }
 
-  &__title {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--text-color-secondary);
-  }
+    &__title {
+        font-weight: 400;
+        @include fzlh(16, 24);
+        color: var(--text-color-secondary);
+    }
 }
