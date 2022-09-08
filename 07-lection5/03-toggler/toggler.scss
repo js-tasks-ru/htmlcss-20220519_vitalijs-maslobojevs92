@@ -22,25 +22,30 @@
         clip-path: inset(100%);
         clip: rect(0, 0, 0, 0);
         overflow: hidden;
-    }
 
-    &__input:disabled + &__container {
-        background: var(--bg-color-primary-darken);
-    }
-    &__input:disabled + &__container &__control {
-        background: var(--bg-color-primary-darkest);
-        opacity: .25;
-    }
+        &:disabled {
+            & + .toggler__container {
+                background: var(--bg-color-primary-darken);
 
-    &__input:checked + &__container {
-        background-color: var(--bg-color-elements);
-        border-color: transparent;
-    }
+                & .toggler__control {
+                    background: var(--bg-color-primary-darkest);
+                    opacity: .25;
+                }
+            }
+        }
 
-    &__input:checked + &__container &__control {
-        left: 100%;
-        transform: translateX(-100%);
-        background-color: var(--bg-color-secondary);
+        &:checked {
+            & + .toggler__container {
+                background-color: var(--bg-color-elements);
+                border-color: transparent;
+
+                & .toggler__control {
+                    left: 100%;
+                    transform: translateX(-100%);
+                    background-color: var(--bg-color-secondary);
+                }
+            }
+        }
     }
 
     &__control {

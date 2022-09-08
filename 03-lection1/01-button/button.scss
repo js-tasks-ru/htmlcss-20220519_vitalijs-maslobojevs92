@@ -19,19 +19,19 @@
     &_primary {
         color: var(--text-color-alternate);
         background-color: var(--bg-color-elements);
-    }
 
-    &_primary:hover:enabled {
-        background-color: var(--bg-color-elements-darken);
+        &:hover:enabled {
+            background-color: var(--bg-color-elements-darken);
+        }
     }
 
     &_secondary {
         color: var(--text-color-alternate);
         background-color: var(--bg-color-elements-secondary);
-    }
 
-    &_secondary:hover:enabled {
-        background-color: var(--bg-color-elements-secondary-darken);
+        &:hover:enabled {
+            background-color: var(--bg-color-elements-secondary-darken);
+        }
     }
 
     &_alternate {
@@ -39,9 +39,9 @@
         background-color: var(--bg-color-secondary);
         border: 1px solid var(--border-color-primary-darken);
         transition: border 200ms ease-out;
-    }
 
-    &_alternate:hover:enabled {
-        border-color: var(--border-color-secondary);
+        &:hover:enabled {
+            border-color: var(--border-color-secondary);
+        }
     }
 }

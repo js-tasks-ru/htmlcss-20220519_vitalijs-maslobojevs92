@@ -17,10 +17,10 @@
         font-weight: 500;
         @include fzlh(50, 64);
         color: var(--text-color-primary);
-    }
 
-    &__title:not(:last-of-type) {
-        margin-bottom: 35px;
+        &:not(:last-of-type) {
+            margin-bottom: 35px;
+        }
     }
 
     @media screen and (max-width: 720px) {

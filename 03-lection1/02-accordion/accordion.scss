@@ -9,28 +9,30 @@
         background: var(--bg-color-secondary);
         border: 1px solid var(--border-color-primary-darken);
         border-radius: 8px;
-    }
 
-    &__item[open] &__text {
-        transition: ease-out 1s;
-        opacity: 1;
-    }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
+        &[open] {
+            .accordion__text {
+                transition: ease-out 1s;
+                opacity: 1;
+            }
 
-    &__item[open] &__icon {
-        transform: rotate(180deg);
-    }
-
-    &__item:last-child {
-        margin-bottom: 0;
+            .accordion__icon {
+                transform: rotate(180deg);
+            }
+        }
     }
 
     &__header {
         position: relative;
         display: block;
-    }
 
-    &__header::marker {
-        display: none;
+        &::marker {
+            display: none;
+        }
     }
 
     &__title {

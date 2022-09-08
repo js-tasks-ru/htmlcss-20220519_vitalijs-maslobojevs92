@@ -8,22 +8,22 @@
     &_preview {
         width: 200px;
         padding: 10px;
-    }
 
-    &_preview &__header {
-        margin-bottom: 10px;
-    }
+        & .calendar__header {
+            margin-bottom: 10px;
+        }
 
-    &_preview &__title {
-        font-size: 14px;
-    }
+        & .calendar__title {
+            font-size: 14px;
+        }
 
-    &_preview &__item_date {
-        font-size: 9px;
-    }
+        & .calendar__item {
+            font-size: 9px;
 
-    &_preview &__item {
-        font-size: 9px;
+            &_date {
+                font-size: 9px;
+            }
+        }
     }
 
     &__header {
@@ -60,19 +60,19 @@
         align-items: center;
         font-weight: 400;
         @include fzlh(16, 20);
-    }
 
-    &__item_date {
-        @include fzlh(14, 20);
-        color: var(--text-color-secondary-darker);
-    }
+        &_date {
+            @include fzlh(14, 20);
+            color: var(--text-color-secondary-darker);
+        }
 
-    &__item_range-boundary {
-        color: var(--text-color-alternate);
-        background-color: var(--bg-color-elements);
-    }
+        &_range-boundary {
+            color: var(--text-color-alternate);
+            background-color: var(--bg-color-elements);
+        }
 
-    &__item_range-line {
-        background: var(--bg-color-elements-lighter);
+        &_range-line {
+            background: var(--bg-color-elements-lighter);
+        }
     }
 }

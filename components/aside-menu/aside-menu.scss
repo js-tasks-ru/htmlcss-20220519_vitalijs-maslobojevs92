@@ -25,18 +25,18 @@
 
     &__item {
         margin-bottom: 4px;
-    }
 
-    &__item:last-child {
-        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__link {
         color: var(--text-color-primary);
         text-decoration: none;
-    }
 
-    &__link_active {
-        color: var(--text-color-active);
+        &_active {
+            color: var(--text-color-active);
+        }
     }
 }

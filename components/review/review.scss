@@ -1,6 +1,10 @@
 .review {
     padding: 36px 0;
 
+    &__container {
+        height: 100%;
+    }
+
     &__inner {
         display: grid;
         grid-template-columns: auto 1fr;

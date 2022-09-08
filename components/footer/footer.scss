@@ -14,29 +14,30 @@
         font-weight: 500;
         @include fzlh(38, 45);
         text-align: center;
-    }
 
-    &__title:not(:last-child) {
-        margin-bottom: 32px;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
     }
 
     &__description {
         max-width: 640px;
         margin: 0 auto;
         text-align: center;
+
+        &_uppercase {
+            font-weight: 500;
+            @include fzlh(12, 18);
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: var(--text-color-secondary-lighter);
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
     }
 
-    &__description_uppercase {
-        font-weight: 500;
-        @include fzlh(12, 18);
-        letter-spacing: .04em;
-        text-transform: uppercase;
-        color: var(--text-color-secondary-lighter);
-    }
-
-    &__description:not(:last-of-type) {
-        margin-bottom: 20px;
-    }
 
     @media screen and (max-width: 720px) {
         & {
@@ -49,10 +50,10 @@
 
         &__title {
             @include fzlh(28, 38);
-        }
 
-        &__title:not(:last-child) {
-            margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
         }
     }
 }
