@@ -1,0 +1,33 @@
+.page_bg {
+    background-image: url('/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/02-background-image/public/forest_2560.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (max-width: 1024px) {
+        & {
+            background-image: url('/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/02-background-image/public/forest_1024.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            background-image: url('/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/02-background-image/public/forest_768.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        & {
+            background-image: url('/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/02-background-image/public/forest_400.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.aside-menu {
+    &__group {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 16px;
+        font-weight: 400;
+        @include fzlh(20, 26);
+        color: var(--text-color-primary-darkest);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-weight: 400;
+        @include fzlh(14, 22);
+    }
+
+    &__item {
+        margin-bottom: 4px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        color: var(--text-color-primary);
+        text-decoration: none;
+
+        &_active {
+            color: var(--text-color-active);
+        }
+    }
+}

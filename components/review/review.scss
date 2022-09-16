@@ -1,0 +1,34 @@
+.review {
+    padding: 36px 0;
+
+    &__container {
+        height: 100%;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 56px;
+        height: 100%;
+    }
+
+    &__menu {
+        width: 230px;
+    }
+
+    @media screen and (max-width: 992px) {
+        & {
+            padding: 0;
+        }
+
+        &__inner {
+            grid-column-gap: 0;
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        &__inner {
+            grid-template-columns: 0 1fr;
+        }
+    }
+}

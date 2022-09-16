@@ -1,0 +1,64 @@
+.toggler {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 12px;
+
+    &__container {
+        width: 52px;
+        padding: 2px;
+        background-color: var(--bg-color-secondary);
+        border: 1px solid var(--border-color-primary);
+        border-radius: 16px;
+    }
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+
+        &:disabled {
+            & + .toggler__container {
+                background: var(--bg-color-primary-darken);
+
+                & .toggler__control {
+                    background: var(--bg-color-primary-darkest);
+                    opacity: .25;
+                }
+            }
+        }
+
+        &:checked {
+            & + .toggler__container {
+                background-color: var(--bg-color-elements);
+                border-color: transparent;
+
+                & .toggler__control {
+                    left: 100%;
+                    transform: translateX(-100%);
+                    background-color: var(--bg-color-secondary);
+                }
+            }
+        }
+    }
+
+    &__control {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        background-color: var(--bg-color-primary-darken);
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-weight: 400;
+        @include fzlh(16, 24);
+        color: var(--text-color-secondary);
+    }
+}
