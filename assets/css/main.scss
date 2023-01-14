@@ -8,6 +8,7 @@
 @import '../../components/card/card.scss';
 @import '../../04-lection2/01-histogram/histogram.scss';
 @import '../../components/footer/footer.scss';
+@import '../../07-lection5/03-toggler/toggler.scss';
 @import '../../03-lection1/01-button/button.scss';
 @import '../../components/review/review.scss';
 @import '../../components/aside-menu/aside-menu.scss';
@@ -26,7 +27,11 @@
 @import '../../04-lection2/02-skeleton/skeleton.scss';
 @import '../../06-lection4/02-background-image/background-image.scss';
 @import '../../06-lection4/03-srcset/srcset.scss';
-@import '../../07-lection5/03-toggler/toggler.scss';
+@import '../../09-lection7/01-burger-menu/burger-menu.scss';
+@import '../../components/page-nav/page-nav.scss';
+@import '../../components/burger-btn/burger-btn.scss';
+@import '../../components/tabs/tabs.scss';
+@import '../../components/code-area/code-area.scss';
 
 :root {
     --white: #ffffff;
@@ -90,6 +95,8 @@
     --fill-color-error: var(--red);
     --fill-color-success: var(--blue);
     --fill-color-primary: var(--black);
+    --fill-color-secondary: var(--grey-3);
+    --fill-color-alternate: var(--grey-4);
 }
 
 html {
@@ -111,4 +118,8 @@ body {
 body {
     font-family: var(--font-family-primary);
     color: var(--text-color-primary);
+}
+
+*[data-hidden] {
+    display: none;
 }

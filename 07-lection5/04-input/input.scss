@@ -51,6 +51,7 @@
         border: 1px solid var(--border-color-primary-darken);
         border-radius: 8px;
         outline: none;
+        transition: border .3s ease-in-out;
 
         &-wrapper {
             position: relative;

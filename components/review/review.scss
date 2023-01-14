@@ -5,6 +5,11 @@
         height: 100%;
     }
 
+    &__content {
+        padding: 30px 0;
+        overflow: hidden;
+    }
+
     &__inner {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -18,7 +23,7 @@
 
     @media screen and (max-width: 992px) {
         & {
-            padding: 0;
+            padding: 24px 0 0;
         }
 
         &__inner {
@@ -29,6 +34,14 @@
     @media screen and (max-width: 720px) {
         &__inner {
             grid-template-columns: 0 1fr;
+        }
+
+        &__menu {
+            visibility: hidden;
+        }
+
+        &__container {
+            background-color: var(--bg-color-secondary);
         }
     }
 }

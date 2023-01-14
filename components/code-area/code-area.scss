@@ -1,0 +1,36 @@
+.code-area {
+
+    &__tabs {
+        position: relative;
+        display: block;
+        margin-bottom: 50px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 100vw;
+            height: 1px;
+            transform: translate(-50%, 0);
+            background-color: var(--bg-color-primary-darken);
+        }
+    }
+
+    &__text {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    &__text code {
+        padding: 0 !important;
+        background-color: unset !important;
+        overflow-y: hidden;
+    }
+
+    @media screen and (max-width: 720px) {
+
+        &__tabs {
+            margin-bottom: 25px;
+        }
+    }
+}

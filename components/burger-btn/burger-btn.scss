@@ -1,0 +1,20 @@
+.burger-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    background-color: unset;
+    line-height: 0;
+
+    &_open {
+        fill: var(--fill-color-alternate);
+        padding: 4px;
+    }
+
+    &_close {
+        padding: 3px;
+        background-color: #DDE2E5;
+        border-radius: 100%;
+        fill: var(--fill-color-primary);
+    }
+}

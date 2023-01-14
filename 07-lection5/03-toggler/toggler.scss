@@ -1,15 +1,7 @@
 .toggler {
     display: inline-flex;
     align-items: center;
-    column-gap: 12px;
-
-    &__container {
-        width: 52px;
-        padding: 2px;
-        background-color: var(--bg-color-secondary);
-        border: 1px solid var(--border-color-primary);
-        border-radius: 16px;
-    }
+    cursor: pointer;
 
     &__input {
         position: absolute;
@@ -24,10 +16,10 @@
         overflow: hidden;
 
         &:disabled {
-            & + .toggler__container {
+            +.toggler__control {
                 background: var(--bg-color-primary-darken);
 
-                & .toggler__control {
+                &::before {
                     background: var(--bg-color-primary-darkest);
                     opacity: .25;
                 }
@@ -35,30 +27,70 @@
         }
 
         &:checked {
-            & + .toggler__container {
+            +.toggler__control {
                 background-color: var(--bg-color-elements);
                 border-color: transparent;
 
-                & .toggler__control {
-                    left: 100%;
+                &::before {
+                    left: calc(100% - 1px);
                     transform: translateX(-100%);
                     background-color: var(--bg-color-secondary);
+                }
+            }
+
+            ~.toggler__icon {
+                &_dark {
+                    fill: var(--fill-color-alternate);
+                }
+
+                &_light {
+                    fill: var(--fill-color-secondary);
                 }
             }
         }
     }
 
     &__control {
-        position: relative;
-        width: 24px;
-        height: 24px;
-        background-color: var(--bg-color-primary-darken);
-        border-radius: 50%;
+        width: 52px;
+        height: 28px;
+        background-color: var(--bg-color-secondary);
+        border: 1px solid var(--border-color-primary);
+        border-radius: 16px;
+        transition: background .3s;
+
+        &::before {
+            content: '';
+            position: relative;
+            top: 1px;
+            left: 1px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-color: var(--bg-color-primary-darken);
+            border-radius: 50%;
+            transition: all .3s ease;
+        }
     }
 
     &__title {
+        margin-left: 12px;
         font-weight: 400;
         @include fzlh(16, 24);
         color: var(--text-color-secondary);
+    }
+
+    &__icon {
+        position: absolute;
+        fill: var(--fill-color-alternate);
+        transition: fill .3s;
+
+        &_light {
+            left: 0;
+        }
+
+        &_dark {
+            right: 0;
+            fill: var(--fill-color-secondary);
+        }
     }
 }

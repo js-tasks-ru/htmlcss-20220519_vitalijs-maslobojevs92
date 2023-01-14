@@ -1,78 +1,246 @@
 <!DOCTYPE html>
 <!-- Шаблон страницы компонентов -->
 <html lang="ru">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../build/index.css" />
-  </head>
-  <body>
-    <div class="page">
-      <header class="page__header header header_grey">
-        <div class="container">
-          <div class="header__menu-panel top-menu">
-            <!-- <span class="burger-menu">BURGER</span> -->
-            <div class="top-menu__logo logo">
-              <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="logo__link">
-                <img
-                  src="../assets/images/logo.svg"
-                  alt="Логотип страницы"
-                  class="logo__img"
-                />
-              </a>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../build/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <header class="page__header header header_grey">
+      <div class="container">
+        <div class="header__menu-panel top-menu">
+          <button class="top-menu__button top-menu__button_open burger-btn burger-btn_open" id="burger-menu-open">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="top-menu__logo logo">
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
+              <img src="../assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+            </a>
+          </div>
+          <div class="top-menu__nav page-nav">
+            <ul class="page-nav__list">
+              <li class="page-nav__item"><a class="page-nav__link page-nav__link_active"
+                  href="/htmlcss-20220519_vitalijs-maslobojevs92/">Components</a></li>
+              <li class="page-nav__item"><a class="page-nav__link"
+                  href="/htmlcss-20220519_vitalijs-maslobojevs92/">About</a></li>
+              <li class="page-nav__item"><a class="page-nav__link"
+                  href="/htmlcss-20220519_vitalijs-maslobojevs92/">Contact</a></li>
+            </ul>
+            <div class="page-nav__control">
+              <label class="page-nav__toggler toggler">
+                <input class="toggler__input" type="checkbox">
+                <div class="toggler__control"></div>
+                <svg class="toggler__icon toggler__icon_light" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-sun"></use>
+                </svg>
+                <svg class="toggler__icon toggler__icon_dark" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-moon"></use>
+                </svg>
+              </label>
             </div>
           </div>
         </div>
-      </header>
-      <main class="page__main review">
-        <div class="review__container container">
-          <div class="review__inner">
-            <nav class="review__menu aside-menu">
-              <section class="aside-menu__group">
-                <h3 class="aside-menu__title">Components</h3>
-                <ul class="aside-menu__list">
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link"
-                      >Modal</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html" class="aside-menu__link"
-                      >Tooltip</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html" class="aside-menu__link"
-                      >Avatar</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a
-                      href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
-                      class="aside-menu__link aside-menu__link_active"
-                      >Calendar</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html" class="aside-menu__link"
-                      >Histogram</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link"
-                      >Custom form elements</a
-                    >
-                  </li>
-                </ul>
-              </section>
-              <div class="aside-menu__group">
-                <ul class="aside-menu__list">
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="aside-menu__link">Home</a>
-                  </li>
-                </ul>
+        <div class="burger-menu" id="burger-menu">
+          <div class="burger-menu__header header">
+            <div class="container">
+              <div class="header__menu-panel top-menu top-menu_center">
+                <button class="top-menu__button burger-btn burger-btn_close" id="burger-menu-close">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-x"></use>
+                  </svg>
+                </button>
+                <div class="top-menu__logo logo">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
+                    <img src="../assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+                  </a>
+                </div>
               </div>
-            </nav>
-            <div class="review__content component">
+            </div>
+          </div>
+          <div class="burger-menu__content">
+            <div class="container">
+              <nav class="aside-menu">
+                <section class="aside-menu__group aside-menu__group_with-line">
+                  <div class="aside-menu__item ">
+                    <div class="aside-menu__toggler toggler">
+                      <div class="toggler__title">Dark mode</div>
+                      <label class="toggler">
+                        <input class="toggler__input" type="checkbox">
+                        <div class="toggler__control"></div>
+                      </label>
+                    </div>
+                </section>
+                <section class="aside-menu__group aside-menu__group_with-line">
+                  <h3 class="aside-menu__title aside-menu__title_grey">Elements</h3>
+                  <ul class="aside-menu__list aside-menu__list_big-margin">
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html"
+                        class="aside-menu__link">Modal</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                        class="aside-menu__link">Tooltip</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                        class="aside-menu__link">Avatar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                        class="aside-menu__link">Calendar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                        class="aside-menu__link aside-menu__link_active">Histogram</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html"
+                        class="aside-menu__link">Custom
+                        form elements</a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="aside-menu__group aside-menu__group_with-line">
+                  <h3 class="aside-menu__title aside-menu__title_grey">Containers</h3>
+                  <ul class="aside-menu__list aside-menu__list_big-margin">
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html"
+                        class="aside-menu__link">Modal</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                        class="aside-menu__link">Tooltip</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                        class="aside-menu__link">Avatar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                        class="aside-menu__link">Calendar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                        class="aside-menu__link">Histogram</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html"
+                        class="aside-menu__link">Custom
+                        form elements</a>
+                    </li>
+                  </ul>
+                </section>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page__main review">
+      <div class="review__container container">
+        <div class="review__inner">
+          <nav class="review__menu aside-menu">
+            <section class="aside-menu__group">
+              <h3 class="aside-menu__title">Elements</h3>
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link">Modal</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                    class="aside-menu__link">Tooltip</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                    class="aside-menu__link">Avatar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                    class="aside-menu__link">Calendar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                    class="aside-menu__link">Histogram</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link">Custom
+                    form elements</a>
+                </li>
+              </ul>
+            </section>
+            <section class="aside-menu__group">
+              <h3 class="aside-menu__title">Containers</h3>
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link">Modal</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                    class="aside-menu__link">Tooltip</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                    class="aside-menu__link">Avatar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                    class="aside-menu__link aside-menu__link_active">Calendar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                    class="aside-menu__link">Histogram</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link">Custom
+                    form elements</a>
+                </li>
+              </ul>
+            </section>
+            <section class="aside-menu__group">
+              <h3 class="aside-menu__title">Templates</h3>
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link">Modal</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                    class="aside-menu__link">Tooltip</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                    class="aside-menu__link">Avatar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                    class="aside-menu__link">Calendar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                    class="aside-menu__link">Histogram</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link">Custom
+                    form elements</a>
+                </li>
+              </ul>
+            </section>
+            <div class="aside-menu__group">
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="aside-menu__link">Home</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="review__content component">
+            <div class="component__review">
               <h1 class="component__title">Calendar</h1>
               <div class="component__content">
                 <article class="calendar">
@@ -81,27 +249,13 @@
                   </header>
                   <div class="calendar__wrapper">
                     <div class="calendar__inner">
-                      <span class="calendar__item calendar__item_date"
-                        >Mon</span
-                      >
-                      <span class="calendar__item calendar__item_date"
-                        >Tue</span
-                      >
-                      <span class="calendar__item calendar__item_date"
-                        >Wed</span
-                      >
-                      <span class="calendar__item calendar__item_date"
-                        >Thu</span
-                      >
-                      <span class="calendar__item calendar__item_date"
-                        >Fri</span
-                      >
-                      <span class="calendar__item calendar__item_date"
-                        >Sat</span
-                      >
-                      <span class="calendar__item calendar__item_date"
-                        >Sun</span
-                      >
+                      <span class="calendar__item calendar__item_date">Mon</span>
+                      <span class="calendar__item calendar__item_date">Tue</span>
+                      <span class="calendar__item calendar__item_date">Wed</span>
+                      <span class="calendar__item calendar__item_date">Thu</span>
+                      <span class="calendar__item calendar__item_date">Fri</span>
+                      <span class="calendar__item calendar__item_date">Sat</span>
+                      <span class="calendar__item calendar__item_date">Sun</span>
                       <span class="calendar__item"></span>
                       <span class="calendar__item"></span>
                       <span class="calendar__item"></span>
@@ -123,24 +277,12 @@
                       <span class="calendar__item">15</span>
                       <span class="calendar__item">16</span>
                       <span class="calendar__item">17</span>
-                      <span class="calendar__item calendar__item_range-boundary"
-                        >18</span
-                      >
-                      <span class="calendar__item calendar__item_range-line"
-                        >19</span
-                      >
-                      <span class="calendar__item calendar__item_range-line"
-                        >20</span
-                      >
-                      <span class="calendar__item calendar__item_range-line"
-                        >21</span
-                      >
-                      <span class="calendar__item calendar__item_range-line"
-                        >22</span
-                      >
-                      <span class="calendar__item calendar__item_range-boundary"
-                        >23</span
-                      >
+                      <span class="calendar__item calendar__item_range-boundary">18</span>
+                      <span class="calendar__item calendar__item_range-line">19</span>
+                      <span class="calendar__item calendar__item_range-line">20</span>
+                      <span class="calendar__item calendar__item_range-line">21</span>
+                      <span class="calendar__item calendar__item_range-line">22</span>
+                      <span class="calendar__item calendar__item_range-boundary">23</span>
                       <span class="calendar__item">24</span>
                       <span class="calendar__item">25</span>
                       <span class="calendar__item">26</span>
@@ -154,16 +296,168 @@
                 </article>
               </div>
             </div>
+            <div class="component__code code-area">
+              <div class="tabs code-area__tabs" data-type="langs">
+                <ul class="tabs__list">
+                  <li class="tabs__item tabs__item_active" data-tabs="html"><button class="tabs__button">Html</button>
+                  </li>
+                  <li class="tabs__item" data-tabs="css"><button class="tabs__button">Css</button></li>
+                </ul>
+              </div>
+              <div class="code-area__content" data-type="langs-content">
+                <div class="code-area__element" data-element="html">
+                  <pre class="code-area__text"><code class="language-html">&lt;article class=&quot;calendar&quot;&gt;
+  &lt;header class=&quot;calendar__header&quot;&gt;
+    &lt;h2 class=&quot;calendar__title&quot;&gt;October 2019&lt;/h2&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;calendar__wrapper&quot;&gt;
+    &lt;div class=&quot;calendar__inner&quot;&gt;
+      &lt;span class=&quot;calendar__item calendar__item_date&quot;&gt;Mon&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_date&quot;&gt;Tue&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_date&quot;&gt;Wed&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_date&quot;&gt;Thu&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_date&quot;&gt;Fri&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_date&quot;&gt;Sat&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_date&quot;&gt;Sun&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;1&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;2&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;3&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;4&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;5&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;6&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;7&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;8&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;9&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;10&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;11&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;12&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;13&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;14&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;15&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;16&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;17&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_range-boundary&quot;&gt;18&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_range-line&quot;&gt;19&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_range-line&quot;&gt;20&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_range-line&quot;&gt;21&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_range-line&quot;&gt;22&lt;/span&gt;
+      &lt;span class=&quot;calendar__item calendar__item_range-boundary&quot;&gt;23&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;24&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;25&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;26&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;27&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;28&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;29&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;30&lt;/span&gt;
+      &lt;span class=&quot;calendar__item&quot;&gt;31&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                </div>
+                <div class="code-area__element" data-hidden="true" data-element="css">
+                  <pre class="code-area__text"><code class="language-css">.calendar {
+  max-width: 300px;
+  padding: 25px 15px;
+  border-radius: 8px;
+  color: var(--text-color-additional-darkest);
+  border: 1px solid var(--border-color-primary-darken);
+}
+
+.calendar_preview {
+  width: 200px;
+  padding: 10px;
+}
+
+.calendar_preview .calendar__header {
+  margin-bottom: 10px;
+}
+
+.calendar_preview .calendar__title {
+  font-size: 14px;
+}
+
+.calendar_preview .calendar__item {
+  font-size: 9px;
+}
+
+.calendar_preview .calendar__item_date {
+  font-size: 9px;
+}
+
+.calendar__header {
+  margin-bottom: 24px;
+}
+
+.calendar__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.calendar__wrapper {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.calendar__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 1px;
+  align-content: stretch;
+}
+
+.calendar__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.calendar__item_date {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-color-secondary-darker);
+}
+
+.calendar__item_range-boundary {
+  color: var(--text-color-alternate);
+  background-color: var(--bg-color-elements);
+}
+
+.calendar__item_range-line {
+  background: var(--bg-color-elements-lighter);
+}</code></pre>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </main>
-      <footer class="page__footer footer footer_grey">
-        <div class="container">
-          <p class="footer__description footer__description_uppercase">
-            Reusable component library
-          </p>
-        </div>
-      </footer>
-    </div>
-  </body>
+      </div>
+    </main>
+    <footer class="page__footer footer footer_grey">
+      <div class="container">
+        <p class="footer__description footer__description_uppercase">
+          Reusable component library
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../components/tabs/tabs.js"></script>
+</body>
+
 </html>

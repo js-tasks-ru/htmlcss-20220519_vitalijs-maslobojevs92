@@ -1,99 +1,307 @@
 <!DOCTYPE html>
 <!-- Шаблон страницы компонентов -->
 <html lang="ru">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../build/index.css" />
-  </head>
-  <body>
-    <div class="page">
-      <header class="page__header header header_grey">
-        <div class="container">
-          <div class="header__menu-panel top-menu">
-            <!-- <span class="burger-menu">BURGER</span> -->
-            <div class="top-menu__logo logo">
-              <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="logo__link">
-                <img
-                  src="../assets/images/logo.svg"
-                  alt="Логотип страницы"
-                  class="logo__img"
-                />
-              </a>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../build/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <header class="page__header header header_grey">
+      <div class="container">
+        <div class="header__menu-panel top-menu">
+          <button class="top-menu__button top-menu__button_open burger-btn burger-btn_open" id="burger-menu-open">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="top-menu__logo logo">
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
+              <img src="../assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+            </a>
+          </div>
+          <div class="top-menu__nav page-nav">
+            <ul class="page-nav__list">
+              <li class="page-nav__item"><a class="page-nav__link page-nav__link_active"
+                  href="/htmlcss-20220519_vitalijs-maslobojevs92/">Components</a></li>
+              <li class="page-nav__item"><a class="page-nav__link"
+                  href="/htmlcss-20220519_vitalijs-maslobojevs92/">About</a></li>
+              <li class="page-nav__item"><a class="page-nav__link"
+                  href="/htmlcss-20220519_vitalijs-maslobojevs92/">Contact</a></li>
+            </ul>
+            <div class="page-nav__control">
+              <label class="page-nav__toggler toggler">
+                <input class="toggler__input" type="checkbox">
+                <div class="toggler__control"></div>
+                <svg class="toggler__icon toggler__icon_light" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-sun"></use>
+                </svg>
+                <svg class="toggler__icon toggler__icon_dark" width="24" height="24" viewBox="0 0 24 24">
+                  <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-moon"></use>
+                </svg>
+              </label>
             </div>
           </div>
         </div>
-      </header>
-      <main class="page__main review">
-        <div class="review__container container">
-          <div class="review__inner">
-            <nav class="review__menu aside-menu">
-              <section class="aside-menu__group">
-                <h3 class="aside-menu__title">Components</h3>
-                <ul class="aside-menu__list">
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link"
-                      >Modal</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html" class="aside-menu__link"
-                      >Tooltip</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a
-                      href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
-                      class="aside-menu__link aside-menu__link_active"
-                      >Avatar</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html" class="aside-menu__link"
-                      >Calendar</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html" class="aside-menu__link"
-                      >Histogram</a
-                    >
-                  </li>
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link"
-                      >Custom form elements</a
-                    >
-                  </li>
-                </ul>
-              </section>
-              <div class="aside-menu__group">
-                <ul class="aside-menu__list">
-                  <li class="aside-menu__item">
-                    <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="aside-menu__link">Home</a>
-                  </li>
-                </ul>
+        <div class="burger-menu" id="burger-menu">
+          <div class="burger-menu__header header">
+            <div class="container">
+              <div class="header__menu-panel top-menu top-menu_center">
+                <button class="top-menu__button burger-btn burger-btn_close" id="burger-menu-close">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-x"></use>
+                  </svg>
+                </button>
+                <div class="top-menu__logo logo">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
+                    <img src="../assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+                  </a>
+                </div>
               </div>
-            </nav>
-            <div class="review__content component">
+            </div>
+          </div>
+          <div class="burger-menu__content">
+            <div class="container">
+              <nav class="aside-menu">
+                <section class="aside-menu__group aside-menu__group_with-line">
+                  <div class="aside-menu__item ">
+                    <div class="aside-menu__toggler toggler">
+                      <div class="toggler__title">Dark mode</div>
+                      <label class="toggler">
+                        <input class="toggler__input" type="checkbox">
+                        <div class="toggler__control"></div>
+                      </label>
+                    </div>
+                </section>
+                <section class="aside-menu__group aside-menu__group_with-line">
+                  <h3 class="aside-menu__title aside-menu__title_grey">Elements</h3>
+                  <ul class="aside-menu__list aside-menu__list_big-margin">
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html"
+                        class="aside-menu__link">Modal</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                        class="aside-menu__link">Tooltip</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                        class="aside-menu__link">Avatar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                        class="aside-menu__link">Calendar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                        class="aside-menu__link aside-menu__link_active">Histogram</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html"
+                        class="aside-menu__link">Custom
+                        form elements</a>
+                    </li>
+                  </ul>
+                </section>
+                <section class="aside-menu__group aside-menu__group_with-line">
+                  <h3 class="aside-menu__title aside-menu__title_grey">Containers</h3>
+                  <ul class="aside-menu__list aside-menu__list_big-margin">
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html"
+                        class="aside-menu__link">Modal</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                        class="aside-menu__link">Tooltip</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                        class="aside-menu__link">Avatar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                        class="aside-menu__link">Calendar</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                        class="aside-menu__link">Histogram</a>
+                    </li>
+                    <li class="aside-menu__item">
+                      <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html"
+                        class="aside-menu__link">Custom
+                        form elements</a>
+                    </li>
+                  </ul>
+                </section>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page__main review">
+      <div class="review__container container">
+        <div class="review__inner">
+          <nav class="review__menu aside-menu">
+            <section class="aside-menu__group">
+              <h3 class="aside-menu__title">Elements</h3>
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link">Modal</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                    class="aside-menu__link">Tooltip</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                    class="aside-menu__link aside-menu__link_active">Avatar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                    class="aside-menu__link">Calendar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                    class="aside-menu__link">Histogram</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link">Custom
+                    form elements</a>
+                </li>
+              </ul>
+            </section>
+            <section class="aside-menu__group">
+              <h3 class="aside-menu__title">Containers</h3>
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link">Modal</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                    class="aside-menu__link">Tooltip</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                    class="aside-menu__link">Avatar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                    class="aside-menu__link">Calendar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                    class="aside-menu__link">Histogram</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link">Custom
+                    form elements</a>
+                </li>
+              </ul>
+            </section>
+            <section class="aside-menu__group">
+              <h3 class="aside-menu__title">Templates</h3>
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="aside-menu__link">Modal</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                    class="aside-menu__link">Tooltip</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                    class="aside-menu__link">Avatar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                    class="aside-menu__link">Calendar</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                    class="aside-menu__link">Histogram</a>
+                </li>
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="aside-menu__link">Custom
+                    form elements</a>
+                </li>
+              </ul>
+            </section>
+            <div class="aside-menu__group">
+              <ul class="aside-menu__list">
+                <li class="aside-menu__item">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="aside-menu__link">Home</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="review__content component">
+            <div class="component__review">
               <h1 class="component__title">Avatar</h1>
               <div class="component__content">
                 <div class="avatar avatar_preview">
-                  <img
-                    src="/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/01-avatar/public/avatar-200.jpg"
-                    alt="Аватар пользователя"
-                    class="avatar__img"
-                  />
+                  <img src="/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/01-avatar/public/avatar-200.jpg"
+                    alt="Аватар пользователя" class="avatar__img" />
+                </div>
+              </div>
+            </div>
+            <div class="component__code code-area">
+              <div class="tabs code-area__tabs" data-type="langs">
+                <ul class="tabs__list">
+                  <li class="tabs__item tabs__item_active" data-tabs="html"><button class="tabs__button">Html</button>
+                  </li>
+                  <li class="tabs__item" data-tabs="css"><button class="tabs__button">Css</button></li>
+                </ul>
+              </div>
+              <div class="code-area__content" data-type="langs-content">
+                <div class="code-area__element" data-element="html">
+                  <pre class="code-area__text"><code class="language-html">&lt;div class=&quot;avatar&quot;&gt;
+  &lt;img
+    src=&quot;public/avatar-200.jpg&quot;
+    alt=&quot;Аватар пользователя&quot;
+    class=&quot;avatar__img&quot;
+  /&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-area__element" data-hidden="true" data-element="css">
+                  <pre class="code-area__text"><code class="language-css">.avatar {
+  width: 102px;
+  height: 102px;
+}
+
+.avatar_preview {
+  width: 160px;
+  height: 160px;
+}
+
+.avatar__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}</code></pre>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
-      <footer class="page__footer footer footer_grey">
-        <div class="container">
-          <p class="footer__description footer__description_uppercase">
-            Reusable component library
-          </p>
-        </div>
-      </footer>
-    </div>
-  </body>
+      </div>
+    </main>
+    <footer class="page__footer footer footer_grey">
+      <div class="container">
+        <p class="footer__description footer__description_uppercase">
+          Reusable component library
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../components/tabs/tabs.js"></script>
+</body>
+
 </html>

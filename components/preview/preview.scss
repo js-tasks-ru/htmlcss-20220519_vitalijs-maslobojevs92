@@ -1,5 +1,4 @@
 .preview {
-    padding: 68px 0;
     background-color: var(--bg-color-primary);
     border-top: 1px solid var(--border-color-primary);
     border-bottom: 1px solid var(--border-color-primary);
@@ -8,6 +7,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+        padding: 68px 0;
     }
 
     &__card {
@@ -16,25 +16,29 @@
         width: calc(100% / 3 - 20px);
     }
 
-    @media screen and (max-width: 992px) {
-        & {
-            padding: 40px 0;
-        }
+    &__button {
+        display: block;
+        width: 182px;
+        margin: 0 auto;
+        margin-bottom: 90px;
+    }
 
+    @media screen and (max-width: 992px) {
         &__inner {
-            justify-content: center;
+            padding: 40px 0;
         }
 
         &__card {
             width: calc(100% / 2 - 20px);
             max-width: 350px;
         }
+
+        &__button {
+            margin-bottom: 50px;
+        }
     }
 
     @media screen and (max-width: 720px) {
-        & {
-            padding: 30px 0;
-        }
 
         &__inner {
             justify-content: center;
