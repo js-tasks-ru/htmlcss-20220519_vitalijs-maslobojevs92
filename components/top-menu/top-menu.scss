@@ -1,3 +1,24 @@
 .top-menu {
+    position: relative;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_center {
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 720px) {
+        & {
+            justify-content: center;
+        }
+    }
+
+    @media screen and (min-width: 720px) {
+        & {
+            &__button_open {
+                display: none;
+            }
+        }
+    }
 }

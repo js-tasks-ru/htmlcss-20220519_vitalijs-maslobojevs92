@@ -8,8 +8,12 @@
     @include fzlh(16, 19);
     border: none;
     border-radius: 8px;
-    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+    transition: opacity .25s ease-in-out, background .25s ease-in-out, border .25s ease-out, transform .2s cubic-bezier(.165, .84, .44, 1);
     cursor: pointer;
+
+    &:enabled:active {
+        transform: translateY(5px);
+    }
 
     &:disabled {
         opacity: .5;
@@ -38,7 +42,6 @@
         color: var(--text-color-secondary);
         background-color: var(--bg-color-secondary);
         border: 1px solid var(--border-color-primary-darken);
-        transition: border 200ms ease-out;
 
         &:hover:enabled {
             border-color: var(--border-color-secondary);

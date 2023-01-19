@@ -1,0 +1,24 @@
+.burger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color-secondary);
+    transform: translateX(-100vw);
+    z-index: 999;
+    transition: transform .3s, visibility .3s linear;
+    visibility: hidden;
+
+    &[data-open] {
+        transform: translateX(0);
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        visibility: visible;
+    }
+
+    &__header {
+        margin-bottom: 16px;
+    }
+}

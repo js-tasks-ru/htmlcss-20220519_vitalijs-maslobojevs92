@@ -1,0 +1,43 @@
+.page-nav {
+    display: inline-flex;
+    @include fzlh(16, 24);
+
+    &__list {
+        display: inline-flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    &__link {
+        color: var(--text-color-secondary-lighter);
+        text-decoration: none;
+
+        &_active {
+            color: var(--text-color-primary);
+        }
+    }
+
+    &__control {
+        margin-left: 55px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__toggler {
+        position: relative;
+        padding: 0 33px;
+    }
+
+    @media screen and (max-width: 720px) {
+        & {
+            display: none;
+        }
+    }
+
+}

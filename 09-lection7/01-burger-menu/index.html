@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <!-- Страница бургер-меню -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./burger-menu.css">
-        <script defer src="./burger-menu.js"></script>
-    </head>
-    <body>
 
-    </body>
+<head>
+    <link rel="stylesheet" href="../../build/index.css">
+    <script defer src="./burger-menu.js"></script>
+</head>
+
+<body>
+    <button class="burger-btn burger-btn_open" id="burger-menu-open">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-menu"></use>
+        </svg>
+    </button>
+    <div class="burger-menu" id="burger-menu">
+        <div class="container">
+            <div class="burger-menu__header header">
+                <div class="header__menu-panel top-menu top-menu_center">
+                    <button class="top-menu__button burger-btn burger-btn_close" id="burger-menu-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-x">
+                            </use>
+                        </svg>
+                    </button>
+                    <div class="top-menu__logo logo">
+                        <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
+                            <img src="../../assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-menu__content">
+            <div class="container">
+                <nav class="aside-menu">
+                    <section class="aside-menu__group aside-menu__group_with-line">
+                        <div class="aside-menu__item ">
+                            <div class="aside-menu__toggler toggler">
+                                <div class="toggler__title">Dark mode</div>
+                                <label class="toggler__label toggler">
+                                    <input type="checkbox" class="toggler__input" />
+                                    <div class="toggler__container">
+                                        <div class="toggler__control"></div>
+                                    </div>
+                                </label>
+                            </div>
+                    </section>
+                    <section class="aside-menu__group aside-menu__group_with-line">
+                        <h3 class="aside-menu__title aside-menu__title_grey">Elements</h3>
+                        <ul class="aside-menu__list aside-menu__list_big-margin">
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html"
+                                    class="aside-menu__link">Modal</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                                    class="aside-menu__link">Tooltip</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                                    class="aside-menu__link">Avatar</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                                    class="aside-menu__link">Calendar</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                                    class="aside-menu__link aside-menu__link_active">Histogram</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html"
+                                    class="aside-menu__link">Custom
+                                    form elements</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="aside-menu__group aside-menu__group_with-line">
+                        <h3 class="aside-menu__title aside-menu__title_grey">Containers</h3>
+                        <ul class="aside-menu__list aside-menu__list_big-margin">
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html"
+                                    class="aside-menu__link">Modal</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html"
+                                    class="aside-menu__link">Tooltip</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html"
+                                    class="aside-menu__link">Avatar</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html"
+                                    class="aside-menu__link">Calendar</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html"
+                                    class="aside-menu__link">Histogram</a>
+                            </li>
+                            <li class="aside-menu__item">
+                                <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html"
+                                    class="aside-menu__link">Custom
+                                    form elements</a>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
