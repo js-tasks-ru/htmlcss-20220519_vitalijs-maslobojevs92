@@ -36,8 +36,7 @@
                 border-color: transparent;
 
                 &::before {
-                    left: calc(100% - 1px);
-                    transform: translateX(-100%);
+                    transform: translateX(100%);
                     background-color: var(--bg-color-secondary);
                 }
             }
