@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./build/index.css" />
   <script defer src="./09-lection7/01-burger-menu/burger-menu.js"></script>
+  <script defer src="./10-lection8/01-theme-changer/theme-changer.js"></script>
 </head>
 
 <body>
@@ -18,9 +19,13 @@
               <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-menu"></use>
             </svg>
           </button>
-          <div class="top-menu__logo logo">
-            <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
-              <img src="assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+          <div class="top-menu__logo logo" aria-label="Page logo">
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="logo__link">
+              <svg class="logo__img" width="110" height="32" viewBox="0 0 110 32" xmlns="http://www.w3.org/2000/svg">
+                <rect y="1" width="30" height="30" />
+                <rect x="38" width="32" height="32" rx="16" />
+                <path d="M78 0L110 32H78V0Z" />
+              </svg>
             </a>
           </div>
           <div class="top-menu__nav page-nav">
@@ -34,7 +39,7 @@
             </ul>
             <div class="page-nav__control">
               <label class="page-nav__toggler toggler">
-                <input class="toggler__input" type="checkbox">
+                <input class="toggler__input toggler__input_theme" type="checkbox">
                 <div class="toggler__control"></div>
                 <svg class="toggler__icon toggler__icon_light" width="24" height="24" viewBox="0 0 24 24">
                   <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-sun"></use>
@@ -65,9 +70,14 @@
                     <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-x"></use>
                   </svg>
                 </button>
-                <div class="top-menu__logo logo">
-                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
-                    <img src="assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+                <div class="top-menu__logo logo" aria-label="Page logo">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="logo__link">
+                    <svg class="logo__img" width="110" height="32" viewBox="0 0 110 32"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="1" width="30" height="30" />
+                      <rect x="38" width="32" height="32" rx="16" />
+                      <path d="M78 0L110 32H78V0Z" />
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -79,9 +89,9 @@
                 <section class="aside-menu__group aside-menu__group_with-line">
                   <div class="aside-menu__item ">
                     <div class="aside-menu__toggler toggler">
-                      <div class="toggler__title">Dark mode</div>
-                      <label class="toggler">
-                        <input class="toggler__input" type="checkbox">
+                      <h3 class="toggler__title">Dark mode</h3>
+                      <label>
+                        <input class="toggler__input toggler__input_theme" type="checkbox">
                         <div class="toggler__control"></div>
                       </label>
                     </div>
@@ -154,224 +164,227 @@
     </header>
     <main class="page__main preview">
       <div class="container">
-        <div class="preview__inner" data-type="components-content">
-          <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html" class="card preview__card"
-            data-element="container">
-            <div class="card__content">
-              <div class="tooltip tooltip_preview">
-                <div class="tooltip__trigger">
-                  <svg class="tooltip__icon">
-                    <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-help"></use>
-                  </svg>
-                </div>
-                <div class="tooltip__bubble">Helper Text</div>
-              </div>
-            </div>
-            <div class="card__header">
-              <h3 class="card__title">Tooltip</h3>
-              <p class="card__type">Container</p>
-            </div>
-          </a>
-          <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="card preview__card"
-            data-element="element">
-            <div class="card__content">
-              <div class="controls">
-                <div class="controls__item">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input" />
-                    <div class="checkbox__control"></div>
-                    <div class="checkbox__title">Default</div>
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input" checked />
-                    <div class="checkbox__control"></div>
-                    <div class="checkbox__title">Checked</div>
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input" disabled />
-                    <div class="checkbox__control"></div>
-                    <div class="checkbox__title">Disabled</div>
-                  </label>
-                </div>
-                <div class="controls__item">
-                  <label class="radio">
-                    <input type="radio" name="state" value="default" class="radio__input" />
-                    <div class="radio__control"></div>
-                    <div class="radio__title">Default</div>
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="state" value="checked" class="radio__input" checked />
-                    <div class="radio__control"></div>
-                    <div class="radio__title">Checked</div>
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="state" value="disabled" class="radio__input" disabled />
-                    <div class="radio__control"></div>
-                    <div class="radio__title">Disabled</div>
-                  </label>
+        <div class="preview__wrapper">
+          <div class="preview__inner" data-type="components-content">
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/tooltip.html" class="card preview__card"
+              data-element="container">
+              <div class="card__content">
+                <div class="tooltip tooltip_preview">
+                  <div class="tooltip__trigger">
+                    <svg class="tooltip__icon">
+                      <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-help">
+                      </use>
+                    </svg>
+                  </div>
+                  <div class="tooltip__bubble">Helper Text</div>
                 </div>
               </div>
-            </div>
-            <div class="card__header">
-              <h3 class="card__title">Custom form elements</h3>
-              <p class="card__type">Element</p>
-            </div>
-          </a>
-          <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html" class="card preview__card"
-            data-element="container">
-            <div class="card__content">
-              <article class="calendar calendar_preview">
-                <header class="calendar__header">
-                  <h2 class="calendar__title">October 2019</h2>
-                </header>
-                <div class="calendar__wrapper">
-                  <div class="calendar__inner">
-                    <span class="calendar__item calendar__item_date">Mon</span>
-                    <span class="calendar__item calendar__item_date">Tue</span>
-                    <span class="calendar__item calendar__item_date">Wed</span>
-                    <span class="calendar__item calendar__item_date">Thu</span>
-                    <span class="calendar__item calendar__item_date">Fri</span>
-                    <span class="calendar__item calendar__item_date">Sat</span>
-                    <span class="calendar__item calendar__item_date">Sun</span>
-                    <span class="calendar__item"></span>
-                    <span class="calendar__item"></span>
-                    <span class="calendar__item"></span>
-                    <span class="calendar__item"></span>
-                    <span class="calendar__item">1</span>
-                    <span class="calendar__item">2</span>
-                    <span class="calendar__item">3</span>
-                    <span class="calendar__item">4</span>
-                    <span class="calendar__item">5</span>
-                    <span class="calendar__item">6</span>
-                    <span class="calendar__item">7</span>
-                    <span class="calendar__item">8</span>
-                    <span class="calendar__item">9</span>
-                    <span class="calendar__item">10</span>
-                    <span class="calendar__item">11</span>
-                    <span class="calendar__item">12</span>
-                    <span class="calendar__item">13</span>
-                    <span class="calendar__item">14</span>
-                    <span class="calendar__item">15</span>
-                    <span class="calendar__item">16</span>
-                    <span class="calendar__item">17</span>
-                    <span class="calendar__item calendar__item_range-boundary">18</span>
-                    <span class="calendar__item calendar__item_range-line">19</span>
-                    <span class="calendar__item calendar__item_range-line">20</span>
-                    <span class="calendar__item calendar__item_range-line">21</span>
-                    <span class="calendar__item calendar__item_range-line">22</span>
-                    <span class="calendar__item calendar__item_range-boundary">23</span>
-                    <span class="calendar__item">24</span>
-                    <span class="calendar__item">25</span>
-                    <span class="calendar__item">26</span>
-                    <span class="calendar__item">27</span>
-                    <span class="calendar__item">28</span>
-                    <span class="calendar__item">29</span>
-                    <span class="calendar__item">30</span>
-                    <span class="calendar__item">31</span>
+              <div class="card__header">
+                <h3 class="card__title">Tooltip</h3>
+                <p class="card__type">Container</p>
+              </div>
+            </a>
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/forms.html" class="card preview__card"
+              data-element="element">
+              <div class="card__content">
+                <div class="controls">
+                  <div class="controls__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input" />
+                      <div class="checkbox__control"></div>
+                      <div class="checkbox__title">Default</div>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input" checked />
+                      <div class="checkbox__control"></div>
+                      <div class="checkbox__title">Checked</div>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input" disabled />
+                      <div class="checkbox__control"></div>
+                      <div class="checkbox__title">Disabled</div>
+                    </label>
+                  </div>
+                  <div class="controls__item">
+                    <label class="radio">
+                      <input type="radio" name="state" value="default" class="radio__input" />
+                      <div class="radio__control"></div>
+                      <div class="radio__title">Default</div>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="state" value="checked" class="radio__input" checked />
+                      <div class="radio__control"></div>
+                      <div class="radio__title">Checked</div>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="state" value="disabled" class="radio__input" disabled />
+                      <div class="radio__control"></div>
+                      <div class="radio__title">Disabled</div>
+                    </label>
                   </div>
                 </div>
-              </article>
-            </div>
-            <div class="card__header">
-              <h3 class="card__title">Calendar</h3>
-              <p class="card__type">Container</p>
-            </div>
-          </a>
-          <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="card preview__card"
-            data-element="container">
-            <div class="card__content">
-              <div id="modal" class="modal-window modal-window_preview">
-                <div class="modal-window__popup-block">
-                  <div class="modal-window__form-group modal-window__form-group_preview form-group">
-                    <label for="field-1" class="form-group__title">Name</label>
-                    <div class="form-group__input-wrapper">
-                      <input id="field-1" type="text" class="form-group__input" placeholder="Placeholder" />
+              </div>
+              <div class="card__header">
+                <h3 class="card__title">Custom form elements</h3>
+                <p class="card__type">Element</p>
+              </div>
+            </a>
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/calendar.html" class="card preview__card"
+              data-element="container">
+              <div class="card__content">
+                <article class="calendar calendar_preview">
+                  <header class="calendar__header">
+                    <h2 class="calendar__title">October 2019</h2>
+                  </header>
+                  <div class="calendar__wrapper">
+                    <div class="calendar__inner">
+                      <span class="calendar__item calendar__item_date">Mon</span>
+                      <span class="calendar__item calendar__item_date">Tue</span>
+                      <span class="calendar__item calendar__item_date">Wed</span>
+                      <span class="calendar__item calendar__item_date">Thu</span>
+                      <span class="calendar__item calendar__item_date">Fri</span>
+                      <span class="calendar__item calendar__item_date">Sat</span>
+                      <span class="calendar__item calendar__item_date">Sun</span>
+                      <span class="calendar__item"></span>
+                      <span class="calendar__item"></span>
+                      <span class="calendar__item"></span>
+                      <span class="calendar__item"></span>
+                      <span class="calendar__item">1</span>
+                      <span class="calendar__item">2</span>
+                      <span class="calendar__item">3</span>
+                      <span class="calendar__item">4</span>
+                      <span class="calendar__item">5</span>
+                      <span class="calendar__item">6</span>
+                      <span class="calendar__item">7</span>
+                      <span class="calendar__item">8</span>
+                      <span class="calendar__item">9</span>
+                      <span class="calendar__item">10</span>
+                      <span class="calendar__item">11</span>
+                      <span class="calendar__item">12</span>
+                      <span class="calendar__item">13</span>
+                      <span class="calendar__item">14</span>
+                      <span class="calendar__item">15</span>
+                      <span class="calendar__item">16</span>
+                      <span class="calendar__item">17</span>
+                      <span class="calendar__item calendar__item_range-boundary">18</span>
+                      <span class="calendar__item calendar__item_range-line">19</span>
+                      <span class="calendar__item calendar__item_range-line">20</span>
+                      <span class="calendar__item calendar__item_range-line">21</span>
+                      <span class="calendar__item calendar__item_range-line">22</span>
+                      <span class="calendar__item calendar__item_range-boundary">23</span>
+                      <span class="calendar__item">24</span>
+                      <span class="calendar__item">25</span>
+                      <span class="calendar__item">26</span>
+                      <span class="calendar__item">27</span>
+                      <span class="calendar__item">28</span>
+                      <span class="calendar__item">29</span>
+                      <span class="calendar__item">30</span>
+                      <span class="calendar__item">31</span>
                     </div>
                   </div>
-                  <div class="modal-window__form-group modal-window__form-group_preview form-group">
-                    <label for="field-2" class="form-group__title">Email</label>
-                    <div class="form-group__input-wrapper">
-                      <input id="field-2" type="text" class="form-group__input" placeholder="Placeholder" />
+                </article>
+              </div>
+              <div class="card__header">
+                <h3 class="card__title">Calendar</h3>
+                <p class="card__type">Container</p>
+              </div>
+            </a>
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/modal.html" class="card preview__card"
+              data-element="container">
+              <div class="card__content">
+                <div id="modal" class="modal-window modal-window_preview">
+                  <div class="modal-window__popup-block">
+                    <div class="modal-window__form-group modal-window__form-group_preview form-group">
+                      <label for="field-1" class="form-group__title">Name</label>
+                      <div class="form-group__input-wrapper">
+                        <input id="field-1" type="text" class="form-group__input" placeholder="Placeholder" />
+                      </div>
                     </div>
+                    <div class="modal-window__form-group modal-window__form-group_preview form-group">
+                      <label for="field-2" class="form-group__title">Email</label>
+                      <div class="form-group__input-wrapper">
+                        <input id="field-2" type="text" class="form-group__input" placeholder="Placeholder" />
+                      </div>
+                    </div>
+                    <button class="modal-window__submit-btn modal-window__submit-btn_preview btn btn_primary">
+                      Submit
+                    </button>
                   </div>
-                  <button class="modal-window__submit-btn modal-window__submit-btn_preview btn btn_primary">
-                    Primary
-                  </button>
                 </div>
               </div>
-            </div>
-            <div class="card__header">
-              <h3 class="card__title">Modal dialog</h3>
-              <p class="card__type">Container</p>
-            </div>
-          </a>
-          <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html" class="card preview__card"
-            data-element="element">
-            <div class="card__content">
-              <article class="histogram histogram_preview">
-                <header class="histogram__header">
-                  <div class="histogram__header-item">
-                    <h2 class="histogram__title">Total orders</h2>
-                    <p href="" class="histogram__link">View all</p>
-                  </div>
-                  <div class="histogram__header-item">
-                    <h3 class="histogram__subtitle">50254</h3>
-                  </div>
-                </header>
-                <section class="histogram__chart">
-                  <div class="histogram__chart-row">
-                    <div class="histogram__chart-column" style="height: 100%"></div>
-                    <div class="histogram__chart-column" style="height: 70%"></div>
-                    <div class="histogram__chart-column" style="height: 44%"></div>
-                    <div class="histogram__chart-column" style="height: 78%"></div>
-                    <div class="histogram__chart-column" style="height: 44%"></div>
-                    <div class="histogram__chart-column" style="height: 60%"></div>
-                    <div class="histogram__chart-column" style="height: 78%"></div>
-                    <div class="histogram__chart-column" style="height: 100%"></div>
-                    <div class="histogram__chart-column" style="height: 22%"></div>
-                    <div class="histogram__chart-column" style="height: 44%"></div>
-                    <div class="histogram__chart-column" style="height: 60%"></div>
-                    <div class="histogram__chart-column" style="height: 70%"></div>
-                    <div class="histogram__chart-column" style="height: 22%"></div>
-                    <div class="histogram__chart-column" style="height: 100%"></div>
-                    <div class="histogram__chart-column" style="height: 22%"></div>
-                    <div class="histogram__chart-column" style="height: 78%"></div>
-                    <div class="histogram__chart-column" style="height: 60%"></div>
-                    <div class="histogram__chart-column" style="height: 44%"></div>
-                    <div class="histogram__chart-column" style="height: 70%"></div>
-                    <div class="histogram__chart-column" style="height: 60%"></div>
-                    <div class="histogram__chart-column" style="height: 22%"></div>
-                    <div class="histogram__chart-column" style="height: 78%"></div>
-                    <div class="histogram__chart-column" style="height: 70%"></div>
-                    <div class="histogram__chart-column" style="height: 90%"></div>
-                    <div class="histogram__chart-column" style="height: 60%"></div>
-                    <div class="histogram__chart-column" style="height: 22%"></div>
-                    <div class="histogram__chart-column" style="height: 60%"></div>
-                    <div class="histogram__chart-column" style="height: 22%"></div>
-                    <div class="histogram__chart-column" style="height: 70%"></div>
-                    <div class="histogram__chart-column" style="height: 34%"></div>
-                  </div>
-                </section>
-              </article>
-            </div>
-            <div class="card__header">
-              <h3 class="card__title">Histogram</h3>
-              <p class="card__type">Element</p>
-            </div>
-          </a>
-          <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html" class="card preview__card"
-            data-element="element">
-            <div class="card__content">
-              <div class="avatar avatar_preview">
-                <img src="/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/01-avatar/public/avatar-200.jpg"
-                  alt="Аватар пользователя" class="avatar__img" />
+              <div class="card__header">
+                <h3 class="card__title">Modal dialog</h3>
+                <p class="card__type">Container</p>
               </div>
-            </div>
-            <div class="card__header">
-              <h3 class="card__title">Avatar</h3>
-              <p class="card__type">Element</p>
-            </div>
-          </a>
+            </a>
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/histogram.html" class="card preview__card"
+              data-element="element">
+              <div class="card__content">
+                <article class="histogram histogram_preview">
+                  <header class="histogram__header">
+                    <div class="histogram__header-item">
+                      <h2 class="histogram__title">Total orders</h2>
+                      <p href="" class="histogram__link">View all</p>
+                    </div>
+                    <div class="histogram__header-item">
+                      <h3 class="histogram__subtitle">50254</h3>
+                    </div>
+                  </header>
+                  <section class="histogram__chart">
+                    <div class="histogram__chart-row">
+                      <div class="histogram__chart-column" style="height: 100%"></div>
+                      <div class="histogram__chart-column" style="height: 70%"></div>
+                      <div class="histogram__chart-column" style="height: 44%"></div>
+                      <div class="histogram__chart-column" style="height: 78%"></div>
+                      <div class="histogram__chart-column" style="height: 44%"></div>
+                      <div class="histogram__chart-column" style="height: 60%"></div>
+                      <div class="histogram__chart-column" style="height: 78%"></div>
+                      <div class="histogram__chart-column" style="height: 100%"></div>
+                      <div class="histogram__chart-column" style="height: 22%"></div>
+                      <div class="histogram__chart-column" style="height: 44%"></div>
+                      <div class="histogram__chart-column" style="height: 60%"></div>
+                      <div class="histogram__chart-column" style="height: 70%"></div>
+                      <div class="histogram__chart-column" style="height: 22%"></div>
+                      <div class="histogram__chart-column" style="height: 100%"></div>
+                      <div class="histogram__chart-column" style="height: 22%"></div>
+                      <div class="histogram__chart-column" style="height: 78%"></div>
+                      <div class="histogram__chart-column" style="height: 60%"></div>
+                      <div class="histogram__chart-column" style="height: 44%"></div>
+                      <div class="histogram__chart-column" style="height: 70%"></div>
+                      <div class="histogram__chart-column" style="height: 60%"></div>
+                      <div class="histogram__chart-column" style="height: 22%"></div>
+                      <div class="histogram__chart-column" style="height: 78%"></div>
+                      <div class="histogram__chart-column" style="height: 70%"></div>
+                      <div class="histogram__chart-column" style="height: 90%"></div>
+                      <div class="histogram__chart-column" style="height: 60%"></div>
+                      <div class="histogram__chart-column" style="height: 22%"></div>
+                      <div class="histogram__chart-column" style="height: 60%"></div>
+                      <div class="histogram__chart-column" style="height: 22%"></div>
+                      <div class="histogram__chart-column" style="height: 70%"></div>
+                      <div class="histogram__chart-column" style="height: 34%"></div>
+                    </div>
+                  </section>
+                </article>
+              </div>
+              <div class="card__header">
+                <h3 class="card__title">Histogram</h3>
+                <p class="card__type">Element</p>
+              </div>
+            </a>
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92/pages/avatar.html" class="card preview__card"
+              data-element="element">
+              <div class="card__content">
+                <div class="avatar avatar_preview">
+                  <img src="/htmlcss-20220519_vitalijs-maslobojevs92/06-lection4/01-avatar/public/avatar-200.jpg"
+                    alt="Аватар пользователя" class="avatar__img" />
+                </div>
+              </div>
+              <div class="card__header">
+                <h3 class="card__title">Avatar</h3>
+                <p class="card__type">Element</p>
+              </div>
+            </a>
+          </div>
         </div>
         <button class="preview__button btn btn_alternate">Load more</button>
       </div>

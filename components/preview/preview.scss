@@ -3,16 +3,20 @@
     border-top: 1px solid var(--border-color-primary);
     border-bottom: 1px solid var(--border-color-primary);
 
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
         gap: 30px;
         padding: 68px 0;
     }
 
     &__card {
-        /*суммырный gap в строке 30 * 2 = 60px делим на 3 (у нас 3 элемента в строке)*/
-        /*получаем 20px*/
         width: calc(100% / 3 - 20px);
     }
 
@@ -25,6 +29,7 @@
 
     @media screen and (max-width: 992px) {
         &__inner {
+            width: 680px;
             padding: 40px 0;
         }
 
@@ -41,6 +46,7 @@
     @media screen and (max-width: 720px) {
 
         &__inner {
+            width: 100%;
             justify-content: center;
         }
 

@@ -6,6 +6,7 @@
     right: 0;
     display: none;
     background: var(--bg-color-primary-transparent);
+    z-index: 999;
 
     &_preview {
         position: static;

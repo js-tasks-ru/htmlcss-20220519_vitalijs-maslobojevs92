@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../build/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
   <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+  <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
 </head>
 
 <body>
@@ -19,9 +20,13 @@
               <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-menu"></use>
             </svg>
           </button>
-          <div class="top-menu__logo logo">
-            <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
-              <img src="../assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+          <div class="top-menu__logo logo" aria-label="Page logo">
+            <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="logo__link">
+              <svg class="logo__img" width="110" height="32" viewBox="0 0 110 32" xmlns="http://www.w3.org/2000/svg">
+                <rect y="1" width="30" height="30" />
+                <rect x="38" width="32" height="32" rx="16" />
+                <path d="M78 0L110 32H78V0Z" />
+              </svg>
             </a>
           </div>
           <div class="top-menu__nav page-nav">
@@ -35,7 +40,7 @@
             </ul>
             <div class="page-nav__control">
               <label class="page-nav__toggler toggler">
-                <input class="toggler__input" type="checkbox">
+                <input class="toggler__input toggler__input_theme" type="checkbox">
                 <div class="toggler__control"></div>
                 <svg class="toggler__icon toggler__icon_light" width="24" height="24" viewBox="0 0 24 24">
                   <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-sun"></use>
@@ -56,9 +61,14 @@
                     <use href="/htmlcss-20220519_vitalijs-maslobojevs92/assets/images/icons-sprite.svg#icon-x"></use>
                   </svg>
                 </button>
-                <div class="top-menu__logo logo">
-                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="top-menu__link">
-                    <img src="../assets/images/logo.svg" alt="Логотип страницы" class="logo__img" />
+                <div class="top-menu__logo logo" aria-label="Page logo">
+                  <a href="/htmlcss-20220519_vitalijs-maslobojevs92" class="logo__link">
+                    <svg class="logo__img" width="110" height="32" viewBox="0 0 110 32"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="1" width="30" height="30" />
+                      <rect x="38" width="32" height="32" rx="16" />
+                      <path d="M78 0L110 32H78V0Z" />
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -70,9 +80,9 @@
                 <section class="aside-menu__group aside-menu__group_with-line">
                   <div class="aside-menu__item ">
                     <div class="aside-menu__toggler toggler">
-                      <div class="toggler__title">Dark mode</div>
-                      <label class="toggler">
-                        <input class="toggler__input" type="checkbox">
+                      <h3 class="toggler__title">Dark mode</h3>
+                      <label>
+                        <input class="toggler__input toggler__input_theme" type="checkbox">
                         <div class="toggler__control"></div>
                       </label>
                     </div>
@@ -358,6 +368,7 @@
   background-color: var(--bg-color-elements);
   border: none;
   border-radius: 4px;
+  animation: pulse 0.5s;
 }
 
 .checkbox__input:focus + .checkbox__control {
@@ -388,6 +399,24 @@
   color: var(--text-color-secondary);
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  25% {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+  75% {
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 16px rgba(0, 0, 0, 0);
+  }
+}
+                    
 //radio
 .radio {
   display: inline-flex;
@@ -421,6 +450,7 @@
 
 .radio__input:disabled + .radio__control {
   background: var(--bg-color-primary-darken);
+  border: none;
 }
 
 .radio__input:disabled ~ .radio__title {
@@ -437,21 +467,22 @@
 }
 
 .radio__control::after {
+  content: "";
   position: absolute;
-  content: '';
-  top: calc(50% - 12px);
-  left: calc(50% - 12px);
-  width: 24px;
-  height: 24px;
-  border: 3px solid var(--white);
-  border-radius: 50%;
+  top: 50%;
+  left: 50%;
   display: none;
+  width: 80%;
+  height: 80%;
+  border: 3px solid var(--bg-color-secondary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .radio__title {
   font-weight: 400;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
   color: var(--text-color-secondary);
 }</code></pre>
                 </div>

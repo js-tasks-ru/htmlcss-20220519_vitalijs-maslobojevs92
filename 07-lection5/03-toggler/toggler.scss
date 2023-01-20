@@ -3,6 +3,10 @@
     align-items: center;
     cursor: pointer;
 
+    & label {
+        cursor: pointer;
+    }
+
     &__input {
         position: absolute;
         width: 0;
@@ -73,7 +77,7 @@
     }
 
     &__title {
-        margin-left: 12px;
+        margin: 0;
         font-weight: 400;
         @include fzlh(16, 24);
         color: var(--text-color-secondary);
