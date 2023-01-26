@@ -3,6 +3,10 @@
     align-items: center;
     cursor: pointer;
 
+    & label {
+        cursor: pointer;
+    }
+
     &__input {
         position: absolute;
         width: 0;
@@ -32,8 +36,7 @@
                 border-color: transparent;
 
                 &::before {
-                    left: calc(100% - 1px);
-                    transform: translateX(-100%);
+                    transform: translateX(100%);
                     background-color: var(--bg-color-secondary);
                 }
             }
@@ -73,7 +76,7 @@
     }
 
     &__title {
-        margin-left: 12px;
+        margin: 0;
         font-weight: 400;
         @include fzlh(16, 24);
         color: var(--text-color-secondary);

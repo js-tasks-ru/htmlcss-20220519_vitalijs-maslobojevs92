@@ -76,6 +76,7 @@
     --bg-color-primary-darkest: var(--grey-3);
     --bg-color-primary-transparent: var(--transparent-grey);
     --bg-color-secondary: var(--white);
+    --bg-color-alternate: var(--black);
     --bg-color-elements: var(--light-blue);
     --bg-color-elements-lighter: var(--transparent-blue);
     --bg-color-elements-darken: var(--blue-1);
@@ -113,6 +114,32 @@ body {
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+html[data-theme-dark] {
+    --text-color-primary: #dedbd6;
+    --text-color-primary-darkest: #ffffff;
+    --text-color-secondary: #b6afa8;
+    --text-color-alternate: #000000;
+    --text-color-additional-darkest: #b6afa8;
+
+    --bg-color-primary: #495057;
+    --bg-color-primary-darken: #54514c;
+    --bg-color-primary-darkest: #534a42;
+    --bg-color-secondary: #212429;
+    --bg-color-alternate: #dedbd6;
+
+    --border-color-primary: #5b5d61;
+    --border-color-secondary: #dedbd6;
+    --border-color-alternate: #bd9c14;
+
+    --box-shadow-primary: rgba(222, 219, 214, .05);
+    --box-shadow-secondary: #b6afa8;
+
+    --fill-color-primary: #adb4c0;
+    --fill-color-alternate: #b6afa8;
+    --fill-color-secondary: #585c64;
+
 }
 
 body {

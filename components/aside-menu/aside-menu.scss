@@ -60,6 +60,7 @@
     &__toggler {
         display: flex;
         justify-content: space-between;
+        cursor: default;
     }
 
     &__link {
